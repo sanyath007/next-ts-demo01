@@ -2,15 +2,15 @@ import { FaFacebook, FaEnvelope, FaYoutube } from 'react-icons/fa'
 
 export default function Footer () {
     return (
-        <footer className="bottom-0 absolute w-full" style={{ background: '#06693a'}}>
+        <footer className="absolute h-auto w-full" style={{ background: '#06693a'}}>
             <div className="container mx-auto text-white" style={{ fontSize: '0.875rem' }}>
                 <div className="flex flex-col">
                     <div className="flex flex-row justify-between py-5">
                         {/* Col */}
                         <div className="flex flex-col">
                             <h2 className="font-bold text-md my-2">โรงพยาบาลเทพรัตน์นครราชสีมา</h2>
-                            <div className="text-xs font-light">
-                                Debaratana Nakhon Ratchasima Hospital
+                            <div className="text-xs font-light space-y-1">
+                                <p>Debaratana Nakhon Ratchasima Hospital</p>
                                 <p>345/5 หมู่ 5 ถนนมิตรภาพ ตำบลโคกกรวด อำเภอเมือง นครราชสีมา 30280</p>
                             </div>
                         </div>
@@ -33,7 +33,7 @@ export default function Footer () {
                                 <li>โทรสาร 02-598-8693</li>
                                 <li>อีเมลล์ occmed_pathum@hotmail.com</li>
                             </ul>
-                            <div className="social-icons flex gap-4 mt-1 text-2xl">
+                            <div className="social-icons flex gap-4 mt-2 text-2xl">
                                 <a href="#" className="hover:text-gray-300"><FaFacebook /></a>
                                 <a href="#" className="hover:text-gray-300"><FaEnvelope /></a>
                                 <a href="#" className="hover:text-gray-300"><FaYoutube /></a>

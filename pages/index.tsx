@@ -38,11 +38,17 @@ export default function Home() {
             <div className="bg-gray-100" style={{ minHeight: '100vh' }}>
                 <Navbar screenWidth={screen.width} />
 
-                <main className="container mx-auto pt-2">
-                    <h1 className="text-3xl">Home Page</h1>
+                <main className="container mx-auto my-4 py-2 border" style={{ minHeight: '80vh' }}>
+                    <div className="content my-2 px-4">
+                        <h1 className="title text-3xl">Home Page</h1>
 
-                    <div className="content">
-                        
+                        <div className="flex flex-col border rounded-md">
+                            <div className="flex flex-row w-5 h-10">
+                                <Image  src="/" width={200} height={200} alt="" />
+                            </div>
+
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi optio quasi necessitatibus enim, ex corporis sint. Quibusdam tempora sint, eius dolor laudantium porro ducimus harum laborum, eum facilis doloremque inventore vitae pariatur esse minima sunt dolore aperiam. Adipisci maiores ratione cumque accusamus perferendis, earum sapiente quam! Animi voluptatem distinctio soluta officia reprehenderit facilis nam asperiores quia est itaque? Officiis cum voluptates debitis delectus, obcaecati consectetur labore aperiam voluptatibus odit exercitationem ad perferendis temporibus tempora pariatur nulla impedit qui veritatis, porro ducimus beatae neque nihil! Sed voluptatum sapiente a eligendi, delectus sint, dolor tempore, error similique repudiandae id fuga dolore excepturi!</p>
+                        </div>
                     </div>
                 </main>
 
