@@ -6,6 +6,7 @@ import { getWindowDimensions } from '../utils'
 import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
+import PostList from '../components/posts/post-list'
 
 const inter = Inter({ subsets: ['latin'] })
 const initialState = {
@@ -38,18 +39,8 @@ export default function Home() {
             <div className="bg-gray-100" style={{ minHeight: '100vh' }}>
                 <Navbar screenWidth={screen.width} />
 
-                <main className="container mx-auto my-4 py-2 border" style={{ minHeight: '80vh' }}>
-                    <div className="content my-2 px-4">
-                        <h1 className="title text-3xl">Home Page</h1>
-
-                        <div className="flex flex-col border rounded-md">
-                            <div className="flex flex-row w-5 h-10">
-                                <Image  src="/" width={200} height={200} alt="" />
-                            </div>
-
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi optio quasi necessitatibus enim, ex corporis sint. Quibusdam tempora sint, eius dolor laudantium porro ducimus harum laborum, eum facilis doloremque inventore vitae pariatur esse minima sunt dolore aperiam. Adipisci maiores ratione cumque accusamus perferendis, earum sapiente quam! Animi voluptatem distinctio soluta officia reprehenderit facilis nam asperiores quia est itaque? Officiis cum voluptates debitis delectus, obcaecati consectetur labore aperiam voluptatibus odit exercitationem ad perferendis temporibus tempora pariatur nulla impedit qui veritatis, porro ducimus beatae neque nihil! Sed voluptatum sapiente a eligendi, delectus sint, dolor tempore, error similique repudiandae id fuga dolore excepturi!</p>
-                        </div>
-                    </div>
+                <main className="container mx-auto my-4 p-4 border" style={{ minHeight: '80vh' }}>
+                    <PostList />
                 </main>
 
                 <Footer />
