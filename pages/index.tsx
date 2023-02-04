@@ -7,6 +7,7 @@ import Navbar from '../components/navbar'
 import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 import PostList from '../components/posts/post-list'
+import SlideHeros from '../components/heros/slide-heros'
 
 const inter = Inter({ subsets: ['latin'] })
 const initialState = {
@@ -39,8 +40,15 @@ export default function Home() {
             <div className="bg-gray-100" style={{ minHeight: '100vh' }}>
                 <Navbar screenWidth={screen.width} />
 
-                <main className="container mx-auto my-4 p-4 border" style={{ minHeight: '80vh' }}>
+                <main className="container mx-auto" style={{ minHeight: '80vh' }}>
+                    {/* Section 1 */}
+                    <SlideHeros />
+
+                    {/* Section 2 */}
                     <PostList />
+
+                    {/* Bottom */}
+
                 </main>
 
                 <Footer />

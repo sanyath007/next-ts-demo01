@@ -4,6 +4,10 @@
 @tailwind components;
 @tailwind utilities;
 
+:root {
+  --swiper-navigation-color: #E49A38;
+}
+
 * {
   box-sizing: border-box;
   padding: 0;
