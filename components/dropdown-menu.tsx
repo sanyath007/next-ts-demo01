@@ -15,7 +15,7 @@ export default function DropdownMenu ({ name, submenus, defaultState, ...props }
                 <FaCaretDown />
             </a>
             {(toggleDropdown || defaultState) && (
-                <div className="lg:absolute bg-white right-0 rounded-md p-2 border">
+                <div className="lg:absolute bg-white right-0 rounded-md p-2 border z-10">
                     <ul className="flex flex-col space-y-2 lg:w-48">
                         {submenus && submenus.map((submenu, index) => (
                             <li key={index}>
