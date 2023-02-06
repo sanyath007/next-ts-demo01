@@ -8,6 +8,7 @@ import Footer from '../components/footer'
 import styles from '../styles/Home.module.css'
 import PostList from '../components/posts/post-list'
 import SlideHeros from '../components/heros/slide-heros'
+import VideoList from '../components/videos/video-list'
 
 const inter = Inter({ subsets: ['latin'] })
 const initialState = {
@@ -37,7 +38,7 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div className="bg-gray-100" style={{ minHeight: '100vh' }}>
+            <div style={{ minHeight: '100vh' }}>
                 <Navbar screenWidth={screen.width} />
 
                 <main className="container mx-auto" style={{ minHeight: '80vh' }}>
@@ -47,8 +48,13 @@ export default function Home() {
                     {/* Section 2 */}
                     <PostList />
 
-                    {/* Bottom */}
+                    {/* Videos */}
+                    <VideoList />
 
+                    {/* Bottom */}
+                    <div className="bg-white flex items-center justify-center" style={{ margin: '20px 0', height: '150px' }}>
+                        Bottom
+                    </div>
                 </main>
 
                 <Footer />
