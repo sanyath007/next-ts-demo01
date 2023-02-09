@@ -1,7 +1,4 @@
-import Head from 'next/head'
-import Navbar from '../components/navbar'
-import Footer from '../components/footer'
-import styles from '../styles/Structure.module.css'
+import Head from "next/head"
 
 export default function Structure() {
     return (
@@ -13,87 +10,79 @@ export default function Structure() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <div style={{ minHeight: '100vh' }}>
-                <Navbar screenWidth={1024} />
+            <section className="p-2">
+                <h1 className="title text-3xl">โครงสร้างองค์กร</h1>
 
-                <main className="container mx-auto bg-white" style={{ minHeight: '80vh' }}>
-                    <section className="p-2">
-                        <h1 className="title text-3xl">โครงสร้างองค์กร</h1>
-
-                        <div className="structure h-full my-10">
-                            <div className="container">
-                                <h1 className="level-1 rectangle">CEO</h1>
-                                <ol className="level-2-wrapper">
+                <div className="structure h-full my-10">
+                    <div className="container">
+                        <h1 className="level-1 rectangle">CEO</h1>
+                        <ol className="level-2-wrapper">
+                            <li>
+                                <h2 className="level-2 rectangle">Director A</h2>
+                                <ol className="level-3-wrapper">
                                     <li>
-                                        <h2 className="level-2 rectangle">Director A</h2>
-                                        <ol className="level-3-wrapper">
-                                            <li>
-                                                <h3 className="level-3 rectangle">Manager A</h3>
-                                                <ol className="level-4-wrapper">
-                                                    <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                    <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                    <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                    <li><h4 className="level-4 rectangle">Person D</h4></li>
-                                                </ol>
-                                            </li>
-                                            <li>
-                                                <h3 className="level-3 rectangle">Manager B</h3>
-                                                <ol className="level-4-wrapper">
-                                                    <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                    <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                    <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                    <li><h4 className="level-4 rectangle">Person D</h4></li>
-                                                </ol>
-                                            </li>
+                                        <h3 className="level-3 rectangle">Manager A</h3>
+                                        <ol className="level-4-wrapper">
+                                            <li><h4 className="level-4 rectangle">Person A</h4></li>
+                                            <li><h4 className="level-4 rectangle">Person B</h4></li>
+                                            <li><h4 className="level-4 rectangle">Person C</h4></li>
+                                            <li><h4 className="level-4 rectangle">Person D</h4></li>
                                         </ol>
                                     </li>
                                     <li>
-                                        <h2 className="level-2 rectangle">Director B</h2>
-                                        <ol className="level-3-wrapper">
-                                            <li>
-                                            <h3 className="level-3 rectangle">Manager C</h3>
-                                            <ol className="level-4-wrapper">
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person A</h4>
-                                                </li>
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person B</h4>
-                                                </li>
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person C</h4>
-                                                </li>
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person D</h4>
-                                                </li>
-                                            </ol>
-                                            </li>
-                                            <li>
-                                            <h3 className="level-3 rectangle">Manager D</h3>
-                                            <ol className="level-4-wrapper">
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person A</h4>
-                                                </li>
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person B</h4>
-                                                </li>
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person C</h4>
-                                                </li>
-                                                <li>
-                                                <h4 className="level-4 rectangle">Person D</h4>
-                                                </li>
-                                            </ol>
-                                            </li>
+                                        <h3 className="level-3 rectangle">Manager B</h3>
+                                        <ol className="level-4-wrapper">
+                                            <li><h4 className="level-4 rectangle">Person A</h4></li>
+                                            <li><h4 className="level-4 rectangle">Person B</h4></li>
+                                            <li><h4 className="level-4 rectangle">Person C</h4></li>
+                                            <li><h4 className="level-4 rectangle">Person D</h4></li>
                                         </ol>
                                     </li>
                                 </ol>
-                            </div>
-                        </div>
-                    </section>
-                </main>
-
-                <Footer />
-            </div>
+                            </li>
+                            <li>
+                                <h2 className="level-2 rectangle">Director B</h2>
+                                <ol className="level-3-wrapper">
+                                    <li>
+                                    <h3 className="level-3 rectangle">Manager C</h3>
+                                    <ol className="level-4-wrapper">
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person A</h4>
+                                        </li>
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person B</h4>
+                                        </li>
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person C</h4>
+                                        </li>
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person D</h4>
+                                        </li>
+                                    </ol>
+                                    </li>
+                                    <li>
+                                    <h3 className="level-3 rectangle">Manager D</h3>
+                                    <ol className="level-4-wrapper">
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person A</h4>
+                                        </li>
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person B</h4>
+                                        </li>
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person C</h4>
+                                        </li>
+                                        <li>
+                                        <h4 className="level-4 rectangle">Person D</h4>
+                                        </li>
+                                    </ol>
+                                    </li>
+                                </ol>
+                            </li>
+                        </ol>
+                    </div>
+                </div>
+            </section>
         </>
     )
 }
