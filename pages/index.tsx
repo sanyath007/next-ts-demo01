@@ -9,12 +9,16 @@ import styles from '../styles/Home.module.css'
 import PostList from '../components/posts/post-list'
 import SlideHeros from '../components/heros/slide-heros'
 import VideoList from '../components/videos/video-list'
+import dynamic from "next/dynamic"
 
 const inter = Inter({ subsets: ['latin'] })
 const initialState = {
     width: 0,
     height: 0
 }
+const Map = dynamic(() => import('../components/maps/map-area'), {
+    ssr: false
+})
 
 export default function Home() {
     const [screen, setScreen] = useState(initialState)
@@ -50,6 +54,9 @@ export default function Home() {
 
                     {/* Videos */}
                     <VideoList />
+
+                    {/* Map */}
+                    <Map />
 
                     {/* Bottom */}
                     <div className="bg-white flex items-center justify-center" style={{ margin: '20px 0', height: '150px' }}>
