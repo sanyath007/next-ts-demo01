@@ -38,12 +38,7 @@ a {
 
 ol {
   list-style: none;
-}
-
-.container {
-  max-width: 1000px;
-  padding: 0 10px;
-  margin: 0 auto;
+  text-align: center;
 }
 
 .rectangle {
@@ -58,6 +53,7 @@ ol {
   width: 50%;
   margin: 0 auto 40px;
   background: var(--level-1);
+  text-align: center;
 }
 
 .level-1::before {
@@ -189,6 +185,7 @@ ol {
   position: relative;
   width: 80%;
   margin-left: auto;
+  text-align: left;
 }
 
 .level-4-wrapper::before {

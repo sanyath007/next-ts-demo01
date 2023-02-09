@@ -8,10 +8,10 @@ export default function Footer () {
                     <div className="flex flex-row justify-between py-5">
                         {/* Col */}
                         <div className="flex flex-col">
-                            <h2 className="font-bold text-md my-2">โรงพยาบาลเทพรัตน์นครราชสีมา</h2>
+                            <h2 className="font-bold text-md my-2">ศูนย์สุขภาพจิตที่ 9</h2>
                             <div className="text-xs font-light space-y-1">
-                                <p>Debaratana Nakhon Ratchasima Hospital</p>
-                                <p>345/5 หมู่ 5 ถนนมิตรภาพ ตำบลโคกกรวด อำเภอเมือง นครราชสีมา 30280</p>
+                                <p>Mental Health Center 9</p>
+                                <p>เลขที่ 86 ถ.ช้างเผือก อ.เมือง จ.นครราชสีมา 30000</p>
                             </div>
                         </div>
                         {/* Col */}
@@ -44,8 +44,8 @@ export default function Footer () {
             </div>
             <div style={{ background: '#0a0b0c' }}>
                 <div className="container mx-auto text-white text-center font-light py-4" style={{ fontSize: '12px' }}>
-                    ©2020 โรงพยาบาลเทพรัตน์นครราชสีมา All Rights Reserved | DESIGNED BY 
-                    <a href="https://www.click-end.com/" target="_blank" rel="noreferrer" className="ml-1">
+                    ©2020 ศูนย์สุขภาพจิตที่ 9 All Rights Reserved | DESIGNED BY 
+                    <a href="https://www.query-studio.com" target="_blank" rel="noreferrer" className="ml-1">
                         Query Studio Inc.
                     </a>
                 </div>
