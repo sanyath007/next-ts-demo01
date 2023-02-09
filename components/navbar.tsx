@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import DropdownMenu from './dropdown-menu'
 import ToggleBtn from './toggle-btn'
 
@@ -23,10 +24,14 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
                     <div className="w-full lg:w-auto lg:inline-flex mt-2 lg:mt-0">
                         <ul className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2">
                             <li>
-                                <a href="#" className="flex px-4 py-2 font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md">Dashboard</a>
+                                <Link href="/" className="flex px-4 py-2 font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md">
+                                    หน้าหลัก
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">Projects</a>
+                                <Link href="structure" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">
+                                    โครงสร้างองค์กร
+                                </Link>
                             </li>
                             {/* Dropdown */}
                             <DropdownMenu
