@@ -24,6 +24,16 @@ export default function Home() {
     const [screen, setScreen] = useState(initialState)
 
     useEffect(() => {
+        function handleInit() {
+            setScreen(getWindowDimensions())
+        }
+
+        window.addEventListener("load", handleInit)
+
+        return () => window.removeEventListener('load', handleInit)
+    }, [])
+
+    useEffect(() => {
         function handleResize() {
             setScreen(getWindowDimensions())
         }

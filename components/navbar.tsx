@@ -20,7 +20,7 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
                 />
                 {/* Link */}
                 {(toggleMenu || screenWidth >= 1024) ? (
-                    <div className="w-full lg:inline-flex lg:w-auto mt-2 lg:mt-0">
+                    <div className="w-full lg:w-auto lg:inline-flex mt-2 lg:mt-0">
                         <ul className="flex flex-col lg:flex-row space-y-2 lg:space-y-0 lg:space-x-2">
                             <li>
                                 <a href="#" className="flex px-4 py-2 font-medium text-white bg-blue-900 hover:bg-blue-800 rounded-md">Dashboard</a>
