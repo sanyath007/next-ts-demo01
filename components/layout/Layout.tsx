@@ -9,13 +9,7 @@ export default function Layout({ children }: { children: any }) {
     const [screen, setScreen] = useState<WindowDimension>({ width: 0, height: 0 })
 
     useEffect(() => {
-        function handleInit() {
-            setScreen(getWindowDimensions())
-        }
-
-        window.addEventListener("load", handleInit)
-
-        return () => window.removeEventListener('load', handleInit)
+        setScreen(getWindowDimensions())
     }, [])
 
     useEffect(() => {
