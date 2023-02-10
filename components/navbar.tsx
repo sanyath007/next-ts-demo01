@@ -28,27 +28,31 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
                                     หน้าหลัก
                                 </Link>
                             </li>
-                            <li>
-                                <Link href="structure" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">
-                                    โครงสร้างองค์กร
-                                </Link>
-                            </li>
                             {/* Dropdown */}
                             <DropdownMenu
                                 name="เกี่ยวกับเรา"
                                 submenus={[
-                                    { id: 1, thname: 'ประวัติความเป็นมา', enname: '', link: '' }, 
-                                    { id: 2, thname: 'ทำเนียบผู้บริหาร', enname: '', link: '' },
-                                    { id: 3, thname: 'โครงส้รางองค์กร', enname: '', link: '' },
+                                    { id: 1, thname: 'ประวัติความเป็นมา', enname: '', link: '/about' }, 
+                                    { id: 2, thname: 'ทำเนียบผู้บริหาร', enname: '', link: '/director' },
+                                    { id: 3, thname: 'โครงส้รางองค์กร', enname: '', link: '/structure' },
                                 ]}
                                 defaultState={false}
                             />
                             {/* Dropdown */}
                             <li>
-                                <a href="#" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">Orders</a>
+                                <Link href="/structure" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">
+                                    บริการของเรา
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">Invoices</a>
+                                <a href="#" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">
+                                    คลังความรู้
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="flex px-4 py-2 font-medium text-white hover:bg-blue-800 rounded-md">
+                                    ศูนย์ปฏิบัติการสารสนเทศ
+                                </a>
                             </li>
                         </ul>
                     </div>

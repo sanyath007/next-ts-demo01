@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Link from 'next/link'
 import { FaCaretDown } from 'react-icons/fa'
 import { Submenu } from '../models/Submenu'
 
@@ -24,9 +25,9 @@ export default function DropdownMenu ({
                     <ul className="flex flex-col space-y-2 lg:w-48">
                         {submenus && submenus.map((submenu, index) => (
                             <li key={index}>
-                                <a href="#" className="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black" onClick={() => setToggleDropdown(false)}>
+                                <Link href={submenu.link} className="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black" onClick={() => setToggleDropdown(false)}>
                                     {submenu.thname}
-                                </a>
+                                </Link>
                             </li>
                         ))}
                     </ul>
