@@ -7,6 +7,7 @@ import PostList from '../components/posts/post-list'
 import SlideHeros from '../components/heros/slide-heros'
 import VideoList from '../components/videos/video-list'
 import dynamic from "next/dynamic"
+import OptionMenu from '../components/option-menu/OptionMenu'
 
 const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
@@ -26,20 +27,21 @@ export default function Home() {
             {/* Section 1 */}
             <SlideHeros />
 
-            <div className="container mx-auto bg-white">
-                {/* Section 2 */}
-                <PostList />
+            {/* Section 2 */}
+            <OptionMenu />
 
-                {/* Videos */}
-                <VideoList />
+            {/* Posts Section */}
+            <PostList />
 
-                {/* Map */}
-                <Map />
+            {/* Videos Section */}
+            <VideoList />
 
-                {/* Bottom */}
-                <div className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
-                    Bottom
-                </div>
+            {/* Map Section */}
+            <Map />
+
+            {/* Bottom Section */}
+            <div className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
+                Bottom
             </div>
         </>
     )

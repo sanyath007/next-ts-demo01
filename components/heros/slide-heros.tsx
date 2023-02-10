@@ -7,7 +7,7 @@ export default function SlideHeros() {
     SwiperCore.use([Autoplay])
 
     return (
-        <section className="bg-white mb-4 overflow-hidden" style={{ minHeight: '362px' }}>
+        <section className="bg-white overflow-hidden" style={{ minHeight: '362px' }}>
             <Swiper
                 modules={[Navigation, Pagination]}
                 slidesPerView={1}
