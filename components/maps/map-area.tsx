@@ -61,21 +61,23 @@ export default function MapArea(props: any) {
 
     return (
         <section className="p-2">
-            <h1 className="title text-3xl">พื้นที่รับผิดชอบ</h1>
+            <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
+                <h1 className="title text-3xl">พื้นที่รับผิดชอบ</h1>
 
-            <MapContainer center={[center.lat, center.lng]} zoom={8} style={{ height: '640px' }}>
-                <TileLayer
-                    attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
-                    url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
-                />
-                {/* {center.lat && center.lng && (
-                    <Marker position={[center.lat, center.lng]} />
-                )} */}
+                <MapContainer center={[center.lat, center.lng]} zoom={8} style={{ height: '640px' }}>
+                    <TileLayer
+                        attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'
+                        url="https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+                    />
+                    {/* {center.lat && center.lng && (
+                        <Marker position={[center.lat, center.lng]} />
+                    )} */}
 
-                {areas && areas.map((area: any, index: number) => <BorderLine key={index} province={area} />)}
+                    {areas && areas.map((area: any, index: number) => <BorderLine key={index} province={area} />)}
 
-                <ChangeView coordinates={center} />
-            </MapContainer>
+                    <ChangeView coordinates={center} />
+                </MapContainer>
+            </div>
         </section>
     )
 }

@@ -30,14 +30,16 @@ export default function Home() {
             {/* Section 2 */}
             <OptionMenu />
 
-            {/* Posts Section */}
-            <PostList />
+            <div style={{ padding: '10px 0' }}>
+                {/* Posts Section */}
+                <PostList />
 
-            {/* Videos Section */}
-            <VideoList />
+                {/* Videos Section */}
+                <VideoList />
 
-            {/* Map Section */}
-            <Map />
+                {/* Map Section */}
+                <Map />
+            </div>
 
             {/* Bottom Section */}
             <div className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
