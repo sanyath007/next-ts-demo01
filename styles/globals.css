@@ -53,7 +53,32 @@ body::-webkit-scrollbar-thumb {
 }
 
 /* Navbar */
-.nav-bottom {
+nav .logo {
+  padding: 0 !important;
+  margin: .375rem 0;
+}
+
+nav .logo > img {
+  height: 3.75rem !important;
+}
+
+nav .logo-text {
+  margin: 0 0 0 1.25rem;
+}
+
+nav .logo-text h1 {
+  font-size: 2rem;
+  font-weight: 400;
+  line-height: 1;
+  transition: transform .3s;
+}
+
+nav.logo-text .p {
+  font-size: .75rem !important;
+  opacity: 1 !important;
+}
+
+nav .nav-bottom {
   background: #1d684a;
 }
 
