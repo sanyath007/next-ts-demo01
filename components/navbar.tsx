@@ -35,8 +35,12 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
                             </li>
                             {/* Dropdown */}
                             <DropdownMenu
-                                name="Dropdown"
-                                submenus={['Brands', 'Categories', 'Inventories']}
+                                name="เกี่ยวกับเรา"
+                                submenus={[
+                                    { id: 1, thname: 'ประวัติความเป็นมา', enname: '', link: '' }, 
+                                    { id: 2, thname: 'ทำเนียบผู้บริหาร', enname: '', link: '' },
+                                    { id: 3, thname: 'โครงส้รางองค์กร', enname: '', link: '' },
+                                ]}
                                 defaultState={false}
                             />
                             {/* Dropdown */}

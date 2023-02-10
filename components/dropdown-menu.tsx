@@ -1,7 +1,12 @@
 import { useState } from 'react'
 import { FaCaretDown } from 'react-icons/fa'
+import { Submenu } from '../models/Submenu'
 
-export default function DropdownMenu ({ name, submenus, defaultState, ...props }: { name: string, submenus: string[], defaultState: boolean } ) {
+export default function DropdownMenu ({
+    name,
+    submenus,
+    defaultState
+}: { name: string, submenus: Submenu[], defaultState: boolean } ) {
     const [toggleDropdown, setToggleDropdown] = useState(false)
 
     return (
@@ -20,7 +25,7 @@ export default function DropdownMenu ({ name, submenus, defaultState, ...props }
                         {submenus && submenus.map((submenu, index) => (
                             <li key={index}>
                                 <a href="#" className="flex p-2 font-medium text-gray-600 rounded-md hover:bg-gray-100 hover:text-black" onClick={() => setToggleDropdown(false)}>
-                                    {submenu}
+                                    {submenu.thname}
                                 </a>
                             </li>
                         ))}
