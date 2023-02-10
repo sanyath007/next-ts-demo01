@@ -26,18 +26,20 @@ export default function Home() {
             {/* Section 1 */}
             <SlideHeros />
 
-            {/* Section 2 */}
-            <PostList />
+            <div className="container mx-auto bg-white">
+                {/* Section 2 */}
+                <PostList />
 
-            {/* Videos */}
-            <VideoList />
+                {/* Videos */}
+                <VideoList />
 
-            {/* Map */}
-            <Map />
+                {/* Map */}
+                <Map />
 
-            {/* Bottom */}
-            <div className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
-                Bottom
+                {/* Bottom */}
+                <div className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
+                    Bottom
+                </div>
             </div>
         </>
     )

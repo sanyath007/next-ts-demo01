@@ -33,7 +33,7 @@ export default function Layout({ children }: { children: any }) {
             <div style={{ minHeight: '100vh' }}>
                 <Navbar screenWidth={screen.width} />
 
-                <main className="container mx-auto bg-white" style={{ minHeight: '80vh' }}>
+                <main style={{ minHeight: '80vh' }}>
                     {children}
                 </main>
 
