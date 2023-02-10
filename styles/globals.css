@@ -341,7 +341,6 @@ ol {
 
 #section-2 .contents .content .wrapper {
   @apply relative w-full;
-  /* border: 1px solid red; */
 }
 
 #section-2 .contents .content h6 {
@@ -411,23 +410,23 @@ ol {
 }
 
 #section-2 .contents .content:nth-child(8n+3) .banner {
-  background: #ecd150;
+  background: #5b8bb1;
 }
 
 #section-2 .contents .content:nth-child(8n+4) .banner {
-  background: #ecd150;
+  background: #58c8bc;
 }
 
 #section-2 .contents .content:nth-child(8n+5) .banner {
-  background: #ecd150;
+  background: #fe9a42;
 }
 
 #section-2 .contents .content:nth-child(8n+6) .banner {
-  background: #ecd150;
+  background: #d0505d;
 }
 
 #section-2 .contents .content:nth-child(8n+7) .banner {
-  background: #ecd150;
+  background: #f0c195;
 }
 
 #section-2 .contents .content .order {
