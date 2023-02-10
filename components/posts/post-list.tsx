@@ -5,7 +5,9 @@ export default function PostList () {
     return (
         <section className="p-2">
             <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
-                <h1 className="title text-3xl my-2">ข่าวประชาสัมพันธ์</h1>
+                <h1 className="title text-3xl">ข่าวประชาสัมพันธ์</h1>
+
+                <hr className="my-2" />
 
                 <div>
                     <HeadLine />

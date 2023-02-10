@@ -64,6 +64,8 @@ export default function MapArea(props: any) {
             <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
                 <h1 className="title text-3xl">พื้นที่รับผิดชอบ</h1>
 
+                <hr className="my-2" />
+
                 <MapContainer center={[center.lat, center.lng]} zoom={8} style={{ height: '640px' }}>
                     <TileLayer
                         attribution='&copy; <a href="http://osm.org/copyright">OpenStreetMap</a> contributors'

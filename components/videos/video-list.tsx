@@ -4,9 +4,11 @@ export default function VideoList () {
     return (
         <section className="p-2">
             <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
-                <h1 className="title text-3xl">Section&apos;s Title</h1>
+                <h1 className="title text-3xl">สื่อสุขภาพจิต</h1>
 
-                <div className="flex flex-row gap-2 bg-white rounded-md overflow-hidden p-2">
+                <hr className="my-2" />
+
+                <div className="flex flex-row gap-2 bg-white rounded-md overflow-hidden">
                     <div className="left w-2/3 bg-gray-400 border">
                         <div className="w-100 relative" style={{ height: '360px' }}>
                             <div className="absolute bottom-0 h-10 w-full bg-gray-300 flex flex-row justify-between items-center px-4">
