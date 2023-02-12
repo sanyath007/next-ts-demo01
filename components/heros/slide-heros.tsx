@@ -30,7 +30,7 @@ function Slide({ title, ...props }: { title: string }) {
     return (
         <div className="relative" style={{ height: '362px' }}>
             <img
-                src="https://cdn.pixabay.com/photo/2015/04/23/22/00/tree-736885_1280.jpg"
+                src="https://dmh.go.th/images/slides/No%20Gift%20Policy.jpg?1676045301402"
                 className="w-full h-full"
                 alt="image"
             />
