@@ -2,10 +2,10 @@
 export default function NavLogo() {
     return (
         <div className="container mx-auto">
-            <div className="relative flex justify-between items-center w-full">
+            <div className="relative flex justify-between items-center pt-2">
                 <a href="#" className="logo flex items-center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88.png" alt="logo" />
-                    <div className="logo-text">
+                    <div className="logo-text flex flex-col justify-center pt-2">
                         <h1>ศูนย์สุขภาพจิตที่ 9</h1>
                         <p>Mental Health Center 9</p>
                     </div>
@@ -32,6 +32,18 @@ export default function NavLogo() {
                         </div>
                     </div>
                 </div>
+
+                {/* ================================ nav mobile ================================ */}
+                <div className="mobile-menu">
+                    <div className="sidenav-btn">
+                        <div className="hamburger">
+                            <div></div>
+                            <div></div>
+                            <div></div>
+                        </div>
+                    </div>
+                </div>
+                {/* ================================ End nav mobile ================================ */}
             </div>
         </div>
     )

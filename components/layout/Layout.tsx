@@ -27,7 +27,7 @@ export default function Layout({ children }: { children: any }) {
             <div style={{ minHeight: '100vh' }}>
                 <Navbar screenWidth={screen.width} />
 
-                <main style={{ minHeight: '80vh' }}>
+                <main className="pt-2">
                     {children}
                 </main>
 
