@@ -494,7 +494,7 @@ nav .logo-text {
   line-height: 2.5;
 }
 nav .logo-text h1 {
-  font-size: 2rem !important;
+  font-size: 1.75rem !important;
   font-weight: 500;
   transition: transform .3s;
 }
