@@ -31,14 +31,20 @@ export default function Home() {
             <OptionMenu />
 
             <div style={{ padding: '10px 0' }}>
-                {/* Posts Section */}
-                <PostList />
+                <section className="p-2">
+                    <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
 
-                {/* Videos Section */}
-                <VideoList />
+                        {/* Posts Section */}
+                        <PostList />
 
-                {/* Map Section */}
-                <Map />
+                        {/* Videos Section */}
+                        <VideoList />
+
+                        {/* Map Section */}
+                        <Map />
+
+                    </div>
+                </section>
             </div>
 
             {/* Bottom Section */}
