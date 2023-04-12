@@ -1,9 +1,9 @@
-import BottomMenu from "./bottom-menu";
+import NavMenu from "./nav-menu";
 
 export default function NavLogo() {
     return (
         <div className="container mx-auto">
-            <div className="relative flex justify-between items-center pt-1">
+            <div className="relative flex items-end justify-between pt-1">
                 <a href="#" className="logo flex items-center">
                     <img src="https://upload.wikimedia.org/wikipedia/commons/f/f9/%E0%B8%95%E0%B8%A3%E0%B8%B2%E0%B8%81%E0%B8%A3%E0%B8%B0%E0%B8%97%E0%B8%A3%E0%B8%A7%E0%B8%87%E0%B8%AA%E0%B8%B2%E0%B8%98%E0%B8%B2%E0%B8%A3%E0%B8%93%E0%B8%AA%E0%B8%B8%E0%B8%82%E0%B9%83%E0%B8%AB%E0%B8%A1%E0%B9%88.png" alt="logo" />
                     <div className="logo-text flex flex-col justify-center">
@@ -12,8 +12,11 @@ export default function NavLogo() {
                     </div>
                 </a>
 
-                <BottomMenu />
+                {/* ================================ Nav menus ================================ */}
+                <NavMenu />
+                {/* ================================ End nav menus ================================ */}
 
+                {/* ================================ Menu Options ================================ */}
                 {/* <div className="menu-options flex items-center gap-5">
                     <div className="options flex items-center space-x-1">
                         <p>ขนาดตัวอักษร</p>
@@ -36,8 +39,9 @@ export default function NavLogo() {
                         </div>
                     </div>
                 </div> */}
+                {/* ================================ End menu Options ================================ */}
 
-                {/* ================================ nav mobile ================================ */}
+                {/* ================================ Nav mobile ================================ */}
                 <div className="mobile-menu">
                     <div className="sidenav-btn">
                         <div className="hamburger">

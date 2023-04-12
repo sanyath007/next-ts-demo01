@@ -1,11 +1,11 @@
 nav.topnav {
-position:fixed;
-top:0;
-left:0;
-width:100%;
-border-bottom:1px solid transparent;
-z-index:95;
-transition:box-shadow .3s,top .3s
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    border-bottom: 1px solid transparent;
+    z-index: 95;
+    transition: box-shadow .3s,top .3s
 }
 
 nav.topnav.sticky{box-shadow:rgba(58,45,45,.03) 0 10px 20px;top:-2.875rem}

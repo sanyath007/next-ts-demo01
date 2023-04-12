@@ -3,7 +3,7 @@ import Link from 'next/link'
 import DropdownMenu from './dropdown-menu'
 import ToggleBtn from './toggle-btn'
 import NavLogo from './nav-logo'
-import BottomMenu from './bottom-menu'
+import BottomMenu from './nav-menu'
 
 export default function Navbar({ screenWidth, ...props }: { screenWidth: number }) {
     const [toggleMenu, setToggleMenu] = useState(false)

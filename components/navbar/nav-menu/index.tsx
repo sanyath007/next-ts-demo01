@@ -1,6 +1,7 @@
 import { FaHome } from 'react-icons/fa'
+import MenuItem from './menu-item'
 
-export default function BottomMenu() {
+export default function NavMenu() {
     return (
         <div className="bottom-menu" id="topnav-menu-container">
             <div className="menu icon-menu active">
@@ -114,6 +115,9 @@ export default function BottomMenu() {
                     </div>
                 </div>
             </div>
+
+            <MenuItem />
+
             <div className="menu has-children ">
                 <a data-mid="763" href="javascript:void(0);" target="_self"><div>บริการประชาชน</div></a>
                 <div className="submenu-container ">
