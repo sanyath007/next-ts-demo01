@@ -12,13 +12,13 @@ export default function BottomMenu() {
                 <a data-mid="816" href="javascript:void(0);" target="_self"><div>รู้จักกรม</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
-                        {/* <div className="hero">
+                        <div className="hero">
                             <div className="wrapper lazy-bg" data-src="/bg-01.jpg">
                                 <h2 className="color0">รู้จักกรม</h2>
                                 <p className="color0"></p>
                                 <img className="lazy-img" src="/01.png" data-src="/assets/app/images/menu/01.png" alt="" />
                             </div>
-                        </div> */}
+                        </div>
 
                         <div className="submenus">
                             <div className="submenu ">

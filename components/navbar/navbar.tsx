@@ -74,10 +74,6 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
                         </div> */}
                         {/* ================================ End old nav bottom menu ================================ */}
 
-                        {/* ================================ Nav bottom menu ================================ */}
-                        <BottomMenu />
-                        {/* ============================== End nav bottom menu ============================== */}
-
                     </div>
                     {/* /.menu-container */}
                 </div>

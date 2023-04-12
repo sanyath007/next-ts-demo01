@@ -1,3 +1,4 @@
+import BottomMenu from "./bottom-menu";
 
 export default function NavLogo() {
     return (
@@ -10,6 +11,9 @@ export default function NavLogo() {
                         <p>Mental Health Center 9</p>
                     </div>
                 </a>
+
+                <BottomMenu />
+
                 {/* <div className="menu-options flex items-center gap-5">
                     <div className="options flex items-center space-x-1">
                         <p>ขนาดตัวอักษร</p>
@@ -44,6 +48,7 @@ export default function NavLogo() {
                     </div>
                 </div>
                 {/* ================================ End nav mobile ================================ */}
+
             </div>
         </div>
     )
