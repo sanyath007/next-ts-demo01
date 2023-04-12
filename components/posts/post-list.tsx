@@ -1,3 +1,4 @@
+import CalendarWrapper from "../calendar/calendar";
 import HeadLine from "./head-line";
 import PostItem from "./post-item";
 
@@ -21,7 +22,7 @@ export default function PostList () {
 
                 <div className="lg:w-1/4 xl:w-2/6 flex flex-col text-center pl-4 pb-4 mb-2 space-y-2 sm:hidden lg:block">
                     {/* Director */}
-                    <div className="border rounded-md p-2 mb-2 flex flex-col items-center justify-center space-y-2">
+                    <div className="border rounded-md p-2 mb-4 flex flex-col items-center justify-center space-y-2">
                         <img
                             src="https://www.mhc9dmh.com/data/photo/807_%e0%b8%9c%e0%b8%ad%20%e0%b8%95%e0%b8%b8%e0%b9%88%e0%b8%a1.jpg"
                             alt="director-image"
@@ -32,8 +33,8 @@ export default function PostList () {
                     </div>
 
                     {/* Calendar */}
-                    <div className="border rounded-md p-2 mb-2 h-28">
-                        Calendar
+                    <div className="border rounded-md p-2 mb-4 h-auto">
+                        <CalendarWrapper fullscreen={false} />
                     </div>
                 </div>
             </div>
