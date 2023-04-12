@@ -38,19 +38,6 @@ body {
   font-family: 'Poppins', sans-serif;
   font-family: 'Prompt', sans-serif;
 }
-a {
-  color: inherit;
-  text-decoration: none;
-}
-main {
-  min-height: 80vh;
-  margin-top: 8rem;
-}
-@media screen and (max-width:1199.98px) {
-  main {
-    margin-top: 5.2rem;
-  }
-}
 
 /* Scrollbar */
 body::-webkit-scrollbar {
@@ -65,6 +52,22 @@ body::-webkit-scrollbar-thumb {
   background-color: #525252;    /* color of the scroll thumb */
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid #dadada;  /* creates padding around scroll thumb */
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* main container */
+main {
+  min-height: 80vh;
+  margin-top: 4.5rem;
+}
+@media screen and (max-width:1199.98px) {
+  main {
+    margin-top: 4.8rem;
+  }
 }
 
 /* Structure */
@@ -506,6 +509,7 @@ nav .logo-text p {
 nav .nav-bottom {
   background: #1d684a;
 }
+
 /* Anamai css */
 nav.topnav {
   position: fixed;

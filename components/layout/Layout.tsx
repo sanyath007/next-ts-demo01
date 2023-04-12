@@ -1,5 +1,4 @@
 import { useEffect, useState } from 'react'
-import Head from 'next/head'
 import Navbar from '../navbar/navbar'
 import Footer from '../footer'
 import { getWindowDimensions } from '../../utils'

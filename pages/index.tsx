@@ -30,27 +30,25 @@ export default function Home() {
             {/* Section 2 */}
             <OptionMenu />
 
-            <div style={{ padding: '10px 0' }}>
-                <section className="p-2">
-                    <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
+            <section className="pt-4">
+                <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
 
-                        {/* Posts Section */}
-                        <PostList />
+                    {/* Posts Section */}
+                    <PostList />
 
-                        {/* Videos Section */}
-                        <VideoList />
+                    {/* Videos Section */}
+                    <VideoList />
 
-                        {/* Map Section */}
-                        <Map />
+                    {/* Map Section */}
+                    <Map />
 
-                    </div>
-                </section>
-            </div>
+                </div>
+            </section>
 
             {/* Bottom Section */}
-            <div className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
+            <section className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
                 Bottom
-            </div>
+            </section>
         </>
     )
 }
