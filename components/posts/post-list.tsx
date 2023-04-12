@@ -4,7 +4,7 @@ import PostItem from "./post-item";
 
 export default function PostList () {
     return (
-        <div className="p-2">
+        <div className="p-2 mb-2">
             <h1 className="title text-3xl">ข่าวประชาสัมพันธ์</h1>
 
             <hr className="my-2" />
@@ -16,11 +16,11 @@ export default function PostList () {
                     <div className="post-list md:columns-2 lg:columns-4 mt-4 h-full space-y-2">
                         {[1,2,3,4].map((item, index) => (
                             <PostItem key={index} />
-                            ))}
+                        ))}
                     </div>
                 </div>
 
-                <div className="lg:w-1/4 xl:w-2/6 flex flex-col text-center pl-4 pb-4 mb-2 space-y-2 sm:hidden lg:block">
+                <div className="lg:w-1/4 xl:w-2/6 flex flex-col text-center pl-4 space-y-2 sm:hidden lg:block">
                     {/* Director */}
                     <div className="border rounded-md p-2 mb-5 flex flex-col items-center justify-center space-y-2">
                         <img
@@ -33,7 +33,7 @@ export default function PostList () {
                     </div>
 
                     {/* Calendar */}
-                    <div className="border rounded-md p-2 mb-4 h-auto">
+                    <div className="border rounded-md p-2 h-auto">
                         <h1 className="title text-xl">ปฏิทินกิจกรรม</h1>
 
                         <hr className="mt-2" />

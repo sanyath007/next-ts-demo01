@@ -6,8 +6,7 @@ export default function PostItem () {
             <div className="w-full">
                 <img
                     src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg"
-                    className="w-full"
-                    height={120}
+                    className="w-full h-[155px]"
                     alt="image"
                 />
             </div>
