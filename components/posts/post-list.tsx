@@ -4,7 +4,7 @@ import PostItem from "./post-item";
 export default function PostList () {
     return (
         <div className="p-2 mb-2">
-            <h1 className="title text-3xl">ข่าวประชาสัมพันธ์</h1>
+            <h1 className="title text-3xl">ข่าวกิจกรรม</h1>
 
             <hr className="my-2" />
 

@@ -9,6 +9,7 @@ import VideoList from '../components/videos/video-list'
 import dynamic from "next/dynamic"
 import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
+import NewsList from '../components/posts/news-list'
 
 const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
@@ -48,8 +49,11 @@ export default function Home() {
                     {/* Videos Section */}
                     <VideoList />
 
+                    {/* News Section */}
+                    <NewsList />
+
                     {/* Map Section */}
-                    <Map />
+                    {/* <Map /> */}
 
                 </div>
             </section>
