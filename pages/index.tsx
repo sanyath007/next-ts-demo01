@@ -32,7 +32,7 @@ export default function Home() {
             {/* Section 2 */}
             <OptionMenu />
 
-            <section className="py-4">
+            <section className="pb-5">
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
 
                     {/* Posts Section */}
