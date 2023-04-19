@@ -8,6 +8,7 @@ import SlideHeros from '../components/heros/slide-heros'
 import VideoList from '../components/videos/video-list'
 import dynamic from "next/dynamic"
 import OptionMenu from '../components/option-menu/OptionMenu'
+import Director from '../components/director/director'
 
 const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
@@ -34,7 +35,15 @@ export default function Home() {
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
 
                     {/* Posts Section */}
-                    <PostList />
+                    <div className="flex gap-4">
+                        <div className="w-full lg:w-3/4 xl:4/6">
+                            <PostList />
+                        </div>
+
+                        <div className="lg:w-1/4 xl:w-2/6 flex flex-col pl-4 space-y-2 sm:hidden lg:block">
+                            <Director />
+                        </div>
+                    </div>
 
                     {/* Videos Section */}
                     <VideoList />
