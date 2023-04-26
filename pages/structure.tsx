@@ -10,7 +10,7 @@ export default function Structure() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <section className="p-2" style={{ paddingTop: '2rem' }}>
+            <section className="pb-5 pt-[1rem]">
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
                     <h1 className="title text-3xl">โครงสร้างองค์กร</h1>
 
@@ -44,7 +44,7 @@ export default function Structure() {
                                     </ol> */}
                                 </li>
                                 <li>
-                                    <h2 className="level-2 rectangle">หัวหน้ากลุ่มงานวิชาการสุขภาพ</h2>
+                                    <h2 className="level-2 rectangle">หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h2>
                                     <ol className="level-3-wrapper">
                                         <li>
                                             <h3 className="level-3 rectangle">Manager C</h3>

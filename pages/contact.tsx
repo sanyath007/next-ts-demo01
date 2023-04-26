@@ -10,7 +10,7 @@ export default function Contact() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <section className="p-2">
+            <section className="pb-5 pt-[1rem]">
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
                     <h1 className="title text-3xl">ติดต่อเรา</h1>
 

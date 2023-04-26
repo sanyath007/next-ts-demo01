@@ -47,7 +47,7 @@ export default function NavMenu() {
                                 </div>
                             </div> */}
                             <div className="submenu ">
-                                <Link href="/structure" target="_self">โครงสร้างการทำงาน</Link>
+                                <Link href="/structure" target="_self">โครงสร้างองค์กร</Link>
                             </div>
                             <div className="submenu ">
                                 <a data-mid="829" href="https://anamai.moph.go.th/th/mission-and-acceptance-of-work" target="_self">ภารกิจและหน้าที่รับผิดชอบ</a>
