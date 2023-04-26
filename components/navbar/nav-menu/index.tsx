@@ -6,9 +6,9 @@ export default function NavMenu() {
     return (
         <div className="bottom-menu" id="topnav-menu-container">
             <div className="menu icon-menu active">
-                <a href="https://anamai.moph.go.th/th" data-label="หน้าหลัก">
+                <Link href="/" data-label="หน้าหลัก">
                     <div><FaHome size={'1rem'} /></div>
-                </a>
+                </Link>
             </div>
             <div className="menu has-children ">
                 <a data-mid="816" href="javascript:void(0);" target="_self"><div>รู้จักเรา</div></a>
