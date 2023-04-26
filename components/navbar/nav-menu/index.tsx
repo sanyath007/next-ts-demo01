@@ -10,12 +10,12 @@ export default function NavMenu() {
                 </a>
             </div>
             <div className="menu has-children ">
-                <a data-mid="816" href="javascript:void(0);" target="_self"><div>รู้จักกรม</div></a>
+                <a data-mid="816" href="javascript:void(0);" target="_self"><div>รู้จักเรา</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
                         <div className="hero">
                             <div className="wrapper lazy-bg" data-src="/bg-01.jpg">
-                                <h2 className="color0">รู้จักกรม</h2>
+                                <h2 className="color0">รู้จักเรา</h2>
                                 <p className="color0"></p>
                                 <img className="lazy-img" src="/01.png" data-src="/assets/app/images/menu/01.png" alt="" />
                             </div>
@@ -29,9 +29,9 @@ export default function NavMenu() {
                                 <a data-mid="835" href="https://anamai.moph.go.th/th/mission-vision" target="_self">วิสัยทัศน์ พันธกิจ</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="834" href="https://anamai.moph.go.th/th/executive-department-of-health" target="_self">ผู้บริหารกรมอนามัย</a>
+                                <a data-mid="834" href="https://anamai.moph.go.th/th/executive-department-of-health" target="_self">ผู้บริหารหน่วยงาน</a>
                             </div>
-                            <div className="submenu has-children">
+                            {/* <div className="submenu has-children">
                                 <a data-mid="831" href="javascript:void(0);" target="_self">CIO กรมอนามัย</a>
                                 <div className="child-container">
                                     <div className="childs">
@@ -39,20 +39,22 @@ export default function NavMenu() {
                                             <a data-mid="832" href="https://anamai.moph.go.th/th/cio" target="_self">ประวัติ CIO</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="833" href="https://anamai.moph.go.th/th/information-and-communication-technology-master-plan-of-the-department-of-health" target="_self">แผนปฏิบัติการดิจิทัล</a>
+                                            <a data-mid="833" href="https://anamai.moph.go.th/th/information-and-communication-technology-master-plan-of-the-department-of-health" target="_self">
+                                                แผนปฏิบัติการดิจิทัล
+                                            </a>
                                         </div>
                                     </div>
                                 </div>
-                            </div>
+                            </div> */}
                             <div className="submenu ">
-                                <a data-mid="830" href="https://anamai.moph.go.th/th/structure" target="_self">โครงสร้างและระบบการกำกับดูแลของกรมอนามัย</a>
+                                <a data-mid="830" href="https://anamai.moph.go.th/th/structure" target="_self">โครงสร้างการทำงาน</a>
                             </div>
                             <div className="submenu ">
                                 <a data-mid="829" href="https://anamai.moph.go.th/th/mission-and-acceptance-of-work" target="_self">ภารกิจ และหน้าที่รับผิดชอบของหน่วยงาน</a>
                             </div>
-                            <div className="submenu ">
+                            {/* <div className="submenu ">
                                 <a data-mid="815" href="https://anamai.moph.go.th/th/web-link" target="_self">หน่วยงานในสังกัดกรมอนามัย</a>
-                            </div>
+                            </div> */}
                             <div className="submenu has-children">
                                 <a data-mid="821" href="javascript:void(0);" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
                                 <div className="child-container">
@@ -77,9 +79,9 @@ export default function NavMenu() {
                             <div className="submenu ">
                                 <a data-mid="828" href="https://anamai.moph.go.th/th/manual-standards-of-practice-of-the-department-of-health" target="_self">คู่มือ/มาตรฐานการปฏิบัติงานของกรมอนามัย</a>
                             </div>
-                            <div className="submenu ">
+                            {/* <div className="submenu ">
                                 <a data-mid="916" href="https://person.anamai.moph.go.th/" target="_blank" rel="noreferrer">บริหารทรัพยากรบุคคล</a>
-                            </div>
+                            </div> */}
                             <div className="submenu has-children">
                                 <a data-mid="980" href="javascript:void(0);" target="_self">แผนยุทธศาสตร์หรือแผนพัฒนา</a>
                                 <div className="child-container">
@@ -132,7 +134,7 @@ export default function NavMenu() {
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <a data-mid="837" href="https://anamai.moph.go.th/th/department-of-health-services-manual" target="_self">คู่มือการให้บริการของกรมอนามัย</a>
+                                <a data-mid="837" href="https://anamai.moph.go.th/th/department-of-health-services-manual" target="_self">คู่มือการให้บริการ</a>
                             </div>
                             <div className="submenu ">
                                 <a data-mid="838" href="https://complaint.anamai.moph.go.th/" target="_self">แจ้งเรื่องร้องเรียน</a>
@@ -216,10 +218,10 @@ export default function NavMenu() {
                         </div>
                         <div className="submenus">
                             <div className="submenu ">
-                                <a data-mid="861" href="http://203.157.65.25/complaint/" target="_self">แจ้งเรื่องร้องเรียน</a>
+                                <a data-mid="871" href="https://anamai.moph.go.th/th/contact" target="_self">ติดต่อเรา</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="871" href="https://anamai.moph.go.th/th/contact" target="_self">ติดต่อกรมอนามัย</a>
+                                <a data-mid="861" href="http://203.157.65.25/complaint/" target="_self">แจ้งเรื่องร้องเรียน</a>
                             </div>
                         </div>
                     </div>
