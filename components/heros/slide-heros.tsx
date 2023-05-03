@@ -1,6 +1,6 @@
-import { Swiper, SwiperSlide } from 'swiper/react';
+import { Swiper, SwiperSlide } from 'swiper/react'
 import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
-// Import Swiper styles
+/** Import Swiper styles */
 import 'swiper/swiper-bundle.css'
 
 const slides = [

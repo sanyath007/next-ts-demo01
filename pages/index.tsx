@@ -10,6 +10,7 @@ import dynamic from "next/dynamic"
 import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
 import NewsList from '../components/posts/news-list'
+import SlideLogos from '../components/bottom-logos/slide-logos'
 
 const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
@@ -59,8 +60,8 @@ export default function Home() {
             </section>
 
             {/* Bottom Section */}
-            <section className="bg-white flex items-center justify-center" style={{ height: '150px' }}>
-                Bottom
+            <section className="bg-white h-[240px]">
+                <SlideLogos />
             </section>
         </>
     )

@@ -15,6 +15,11 @@ export default function PostList () {
                     <PostItem key={index} />
                 ))}
             </div>
+            <div className="text-center mt-4">
+                <a href="#" className="text-xs border hover:border-0 rounded-sm py-1 px-3 hover:bg-blue-400 hover:text-white">
+                    ข่าวทั้งหมด
+                </a>
+            </div>
         </div>
     )
 }
