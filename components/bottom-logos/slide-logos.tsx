@@ -19,11 +19,10 @@ export default function SlideLogos() {
     return (
         <div className="h-full py-5">
             <Swiper
-                modules={[Navigation, FreeMode]}
+                modules={[FreeMode]}
                 slidesPerView={4}
                 spaceBetween={30}
                 freeMode={true}
-                navigation
                 autoplay={{
                     delay: 2000
                 }}
