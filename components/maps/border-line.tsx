@@ -11,7 +11,7 @@ export default function BorderLine({ province, ...props }: { province: any }) {
 
             setCoordinates(coords);
         }
-    }, [])
+    }, [province])
 
     return coordinates.length > 0
         ? (

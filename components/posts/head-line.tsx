@@ -4,11 +4,13 @@ export default function HeadLine () {
     return (
         <div className="card w-full bg-white border rounded-md overflow-hidden relative">
             <div className="w-auto h-[400px]">
-                <img
-                    src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg"
-                    className="w-full"
-                    alt="image"
-                />
+                <picture>
+                    <img
+                        src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg"
+                        className="w-full"
+                        alt="image"
+                    />
+                </picture>
             </div>
             <div className="card-body p-3 mt-4 space-y-1 absolute bg-gray-200 opacity-60 bottom-0">
                 <h1 className="font-medium text-2xl text-gray-800">News Topic</h1>

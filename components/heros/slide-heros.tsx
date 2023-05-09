@@ -37,7 +37,9 @@ export default function SlideHeros() {
 function Slide({ slide, ...props }: { slide: any }) {
     return (
         <div className="relative" style={{ height: '475px' }}>
-            <img src={slide.imgUrl} className="w-full h-full" alt="image" />
+            <picture>
+                <img src={slide.imgUrl} className="w-full h-full" alt="image" />
+            </picture>
             <div className="absolute bottom-0 px-4 py-4 bg-gray-100 opacity-30 w-full">
                 <h1>{slide.title}</h1>
             </div>

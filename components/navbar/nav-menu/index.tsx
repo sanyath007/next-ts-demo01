@@ -18,7 +18,9 @@ export default function NavMenu() {
                             <div className="wrapper lazy-bg" data-src="/bg-01.jpg">
                                 <h2 className="color0">รู้จักเรา</h2>
                                 <p className="color0"></p>
-                                <img className="lazy-img" src="/01.png" data-src="/assets/app/images/menu/01.png" alt="" />
+                                <picture>
+                                    <img className="lazy-img" src="/01.png" data-src="/assets/app/images/menu/01.png" alt="" />
+                                </picture>
                             </div>
                         </div>
                         <div className="submenus">
@@ -128,7 +130,9 @@ export default function NavMenu() {
                             <div className="wrapper lazy-bg" data-src="/bg-02.jpg">
                                 <h2 className="color0">บริการประชาชน</h2>
                                 <p className=""></p>
-                                <img className="lazy-img" src="/02.png" data-src="/02.png" alt="" />
+                                <picture>
+                                    <img className="lazy-img" src="/02.png" data-src="/02.png" alt="" />
+                                </picture>
                             </div>
                         </div>
 
@@ -213,7 +217,9 @@ export default function NavMenu() {
                             <div className="wrapper lazy-bg" data-src="/bg-03.jpg">
                                 <h2 className="">ติดต่อเรา</h2>
                                 <p className=""></p>
-                                <img className="lazy-img" src="/05.png" data-src="/05.png" alt="" />
+                                <picture>
+                                    <img className="lazy-img" src="/05.png" data-src="/05.png" alt="" />
+                                </picture>
                             </div>
                         </div>
                         <div className="submenus">

@@ -30,7 +30,9 @@ export default function SlideLogos() {
                 {slides.map(slide => (
                     <SwiperSlide key={slide.id}>
                         <div className="relative h-[200px] flex flex-row justify-center">
-                            <img src={slide.imgUrl} alt="logo" className="h-full w-auto" />
+                            <picture>
+                                <img src={slide.imgUrl} alt="logo" className="h-full w-auto" />
+                            </picture>
                         </div>
                     </SwiperSlide>
                 ))}

@@ -10,7 +10,9 @@ export default function MenuItem() {
                         <div className="wrapper" data-src="/assets/app/images/hero/bg-03.jpg">
                             <h2 className="">ข่าวประชาสัมพันธ์</h2>
                             <p className=""></p>
-                            <img className="" src="/03.png" data-src="/assets/app/images/menu/02.png" alt="" />
+                            <picture>
+                                <img className="" src="/03.png" data-src="/assets/app/images/menu/02.png" alt="" />
+                            </picture>
                         </div>
                     </div>
                     <div className="submenus">
@@ -62,7 +64,7 @@ export default function MenuItem() {
                             <a data-mid="690" href="https://person.anamai.moph.go.th/th/capital-1" target="_blank">ทุนพัฒนาข้าราชการ</a>
                         </div> */}
                         <div className="submenu ">
-                            <a data-mid="864" href="https://person.anamai.moph.go.th/th/cms-of-34" target="_blank">ข่าวรับสมัครงาน</a>
+                            <a data-mid="864" href="https://person.anamai.moph.go.th/th/cms-of-34" target="_self">ข่าวรับสมัครงาน</a>
                         </div>
                         {/* <div className="submenu ">
                             <a data-mid="627" href="https://anamai.moph.go.th/th/cms-of-10" target="_self">ข่าวหนังสือพิมพ์</a>

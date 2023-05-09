@@ -54,10 +54,14 @@ export default function Footer () {
                         <div className="flex flex-col">
                             <div className="flex flex-row items-center gap-2 my-1">
                                 <div className="overflow-hidden rounded-md">
-                                    <img src="https://anamai.moph.go.th/assets/app/images/icon/ipv6.png" alt="" />
+                                    <picture>
+                                        <img src="https://anamai.moph.go.th/assets/app/images/icon/ipv6.png" alt="" />
+                                    </picture>
                                 </div>
                                 <div className="overflow-hidden rounded-md">
-                                    <img src="https://anamai.moph.go.th/assets/app/images/icon/w3c.png" alt="" />
+                                    <picture>
+                                        <img src="https://anamai.moph.go.th/assets/app/images/icon/w3c.png" alt="" />
+                                    </picture>
                                 </div>
                             </div>
                             <div className="text-xs font-light flex flex-row items-center">
