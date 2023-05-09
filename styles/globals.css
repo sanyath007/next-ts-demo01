@@ -430,9 +430,14 @@ ol {
 
 /* ================================== Nav Menu ================================== */
 /* Themes */
-nav.topnav {background:#fff;border-color:#ebebeb }
-nav.topnav .logo {color:#393939 }
-nav.topnav .top-menu {background:#ebebeb }
+nav.topnav {
+  background:#fff;
+  /* border-color:#ebebeb; */
+  /* border-bottom: 1px solid #000; */
+  box-shadow: 0 0 6px rgb(0 0 0 / 15%);
+}
+nav.topnav .logo { color:#393939 }
+nav.topnav .top-menu { background:#ebebeb }
 nav.topnav .top-menu > .option p { color:#393939 }
 nav.topnav .top-menu > .option .btn { background:#fff;color:#000 }
 nav.topnav .top-menu > .option .btn[data-theme="0"] { background:#fff;color:#1d684a }
