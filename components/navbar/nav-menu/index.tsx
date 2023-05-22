@@ -11,7 +11,7 @@ export default function NavMenu() {
                 </Link>
             </div>
             <div className="menu has-children ">
-                <a data-mid="816" href="javascript:void(0);" target="_self"><div>รู้จักเรา</div></a>
+                <a data-mid="816" href="#" target="_self"><div>รู้จักเรา</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
                         <div className="hero">
@@ -34,7 +34,7 @@ export default function NavMenu() {
                                 <a data-mid="834" href="https://anamai.moph.go.th/th/executive-department-of-health" target="_self">ผู้บริหารหน่วยงาน</a>
                             </div>
                             {/* <div className="submenu has-children">
-                                <a data-mid="831" href="javascript:void(0);" target="_self">CIO กรมอนามัย</a>
+                                <a data-mid="831" href="#" target="_self">CIO กรมอนามัย</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
@@ -58,7 +58,7 @@ export default function NavMenu() {
                                 <a data-mid="815" href="https://anamai.moph.go.th/th/web-link" target="_self">หน่วยงานในสังกัดกรมอนามัย</a>
                             </div> */}
                             <div className="submenu has-children">
-                                <a data-mid="821" href="javascript:void(0);" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
+                                <a data-mid="821" href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
@@ -85,7 +85,7 @@ export default function NavMenu() {
                                 <a data-mid="916" href="https://person.anamai.moph.go.th/" target="_blank" rel="noreferrer">บริหารทรัพยากรบุคคล</a>
                             </div> */}
                             <div className="submenu has-children">
-                                <a data-mid="980" href="javascript:void(0);" target="_self">แผนยุทธศาสตร์</a>
+                                <a data-mid="980" href="#" target="_self">แผนยุทธศาสตร์</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
@@ -123,7 +123,7 @@ export default function NavMenu() {
             <MenuItem />
 
             <div className="menu has-children ">
-                <a data-mid="763" href="javascript:void(0);" target="_self"><div>บริการประชาชน</div></a>
+                <a data-mid="763" href="#" target="_self"><div>บริการประชาชน</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
                         <div className="hero">
@@ -150,7 +150,7 @@ export default function NavMenu() {
                                 <a data-mid="889" href="https://anamai.moph.go.th/th/webboard" target="_self">กระดานถาม-ตอบ</a>
                             </div>
                             {/* <div className="submenu has-children">
-                                <a data-mid="839" href="javascript:void(0);" target="_self">ความรู้สุขภาพ</a>
+                                <a data-mid="839" href="#" target="_self">ความรู้สุขภาพ</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
@@ -184,7 +184,7 @@ export default function NavMenu() {
                                 </div>
                             </div> */}
                             <div className="submenu has-children">
-                                <a data-mid="734" href="javascript:void(0);" target="_self">สื่อสุขภาพจิต</a>
+                                <a data-mid="734" href="#" target="_self">สื่อสุขภาพจิต</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
@@ -210,7 +210,7 @@ export default function NavMenu() {
                 </div>
             </div>
             <div className="menu has-children ">
-                <a data-mid="764" href="javascript:void(0);" target="_self"><div>ติดต่อเรา</div></a>
+                <a data-mid="764" href="#" target="_self"><div>ติดต่อเรา</div></a>
                 <div className="submenu-container expand-left">
                     <div className="wrapper">
                         <div className="hero">

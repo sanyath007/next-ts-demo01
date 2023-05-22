@@ -1,7 +1,14 @@
 import HeadLine from "./head-line";
 import PostItem from "./post-item";
 
-export default function PostList () {
+interface ContentItem {
+    id: number;
+    title: string;
+    body: string;
+    userId: number;
+};
+
+export default function PostList ({ contents } : { contents: any }) {
     return (
         <div className="p-2 mb-2">
             <h1 className="title text-3xl">ข่าวกิจกรรม</h1>
@@ -10,9 +17,9 @@ export default function PostList () {
 
             <HeadLine />
 
-            <div className="post-list md:columns-2 lg:columns-4 mt-4 h-full space-y-2">
-                {[1,2,3,4].map((item, index) => (
-                    <PostItem key={index} />
+            <div className="post-list md:columns-2 lg:columns-3 mt-4 h-full space-y-2">
+                {contents && contents.map((item: ContentItem) => (
+                    <PostItem key={item.id} item={item} />
                 ))}
             </div>
             <div className="text-center mt-4">

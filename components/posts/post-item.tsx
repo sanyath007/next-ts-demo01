@@ -1,6 +1,8 @@
 import Image from "next/image";
 
-export default function PostItem () {
+export default function PostItem ({ item }: { item: any }) {
+    console.log(item);
+
     return (
         <div className="card w-full bg-white border rounded-md overflow-hidden">
             <div className="w-full">
@@ -12,10 +14,10 @@ export default function PostItem () {
                     />
                 </picture>
             </div>
-            <div className="card-body p-3 sm:mt-4 md:mt-0 space-y-2">
-                <h1 className="font-medium text-xl">News Topic</h1>
+            <div className="card-body p-3 sm:mt-4 md:mt-0 space-y-2 overflow-hidden h-[220px] border">
+                <h1 className="font-medium text-xl">{item.title}</h1>
                 <p className="font-normal sm:text-sm text-gray-600">
-                    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, velit nam facere nostrum dolor saepe dicta necessitatibus architecto molestias distinctio.
+                    {item.body}
                 </p>
             </div>
         </div>

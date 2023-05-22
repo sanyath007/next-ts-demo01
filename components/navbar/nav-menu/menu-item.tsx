@@ -3,7 +3,7 @@
 export default function MenuItem() {
     return (
         <div className="menu has-children ">
-			<a data-mid="761" href="javascript:void(0);" target="_self"><div>ข่าวประชาสัมพันธ์</div></a>
+			<a data-mid="761" href="#" target="_self"><div>ข่าวประชาสัมพันธ์</div></a>
                 <div className="submenu-container ">
                 <div className="wrapper">
                     <div className="hero">
@@ -32,7 +32,7 @@ export default function MenuItem() {
                             </a>
                         </div> */}
                         <div className="submenu has-children">
-                            <a data-mid="808" href="javascript:void(0);" target="_self">
+                            <a data-mid="808" href="#" target="_self">
                                 ข่าวจัดซื้อจัดจ้าง
                             </a>
                             <div className="child-container">

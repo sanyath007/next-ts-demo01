@@ -11,13 +11,23 @@ import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
 import NewsList from '../components/posts/news-list'
 import SlideLogos from '../components/bottom-logos/slide-logos'
+import axios from 'axios'
 
 const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
     ssr: false
 })
 
-export default function Home() {
+export async function getStaticProps() {
+    const res = await axios.get('http://localhost:14478/api/Contents');
+    const contents = res.data;
+
+    return {
+        props: { contents }
+    }
+}
+
+export default function Home({ contents }: { contents: any }) {
     return (
         <>
             <Head>
@@ -39,7 +49,7 @@ export default function Home() {
                     {/* Posts Section */}
                     <div className="flex gap-4">
                         <div className="w-full lg:w-3/4 xl:4/6">
-                            <PostList />
+                            <PostList contents={contents} />
                         </div>
 
                         <div className="lg:w-1/4 xl:w-2/6 flex flex-col pl-4 space-y-2 sm:hidden lg:block">
