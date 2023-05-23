@@ -1,12 +1,6 @@
 import HeadLine from "./head-line";
 import PostItem from "./post-item";
-
-interface ContentItem {
-    id: number;
-    title: string;
-    body: string;
-    userId: number;
-};
+import { ContentItem } from "../../models/ContentItem";
 
 export default function PostList ({ contents } : { contents: any }) {
     return (
@@ -19,7 +13,7 @@ export default function PostList ({ contents } : { contents: any }) {
 
             <div className="post-list md:columns-2 lg:columns-3 mt-4 h-full space-y-2">
                 {contents && contents.map((item: ContentItem) => (
-                    <PostItem key={item.id} item={item} />
+                    <PostItem key={item.wdId} item={item} />
                 ))}
             </div>
             <div className="text-center mt-4">

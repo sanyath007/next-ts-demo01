@@ -1,8 +1,7 @@
 import Image from "next/image";
+import { ContentItem } from "../../models/ContentItem";
 
-export default function PostItem ({ item }: { item: any }) {
-    console.log(item);
-
+export default function PostItem ({ item }: { item: ContentItem }) {
     return (
         <div className="card w-full bg-white border rounded-md overflow-hidden">
             <div className="w-full">
@@ -15,9 +14,9 @@ export default function PostItem ({ item }: { item: any }) {
                 </picture>
             </div>
             <div className="card-body p-3 sm:mt-4 md:mt-0 space-y-2 overflow-hidden h-[220px] border">
-                <h1 className="font-medium text-xl">{item.title}</h1>
+                <h1 className="font-medium text-xl">{item.wdName}</h1>
                 <p className="font-normal sm:text-sm text-gray-600">
-                    {item.body}
+                    {item.wdDesc}
                 </p>
             </div>
         </div>
