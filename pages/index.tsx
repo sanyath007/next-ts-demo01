@@ -12,6 +12,7 @@ import Director from '../components/director/director'
 import NewsList from '../components/posts/news-list'
 import SlideLogos from '../components/bottom-logos/slide-logos'
 import axios from 'axios'
+import { ContentItem } from '../models/ContentItem'
 
 const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
@@ -27,7 +28,20 @@ export async function getStaticProps() {
     }
 }
 
-export default function Home({ contents }: { contents: any }) {
+export default function Home({ contents }: { contents: any[] }) {
+    const [posts, setPosts] = useState<ContentItem[]>([]);
+    const [headLine, setHeadLine] = useState<ContentItem>();
+
+    useEffect(() => {
+        if (contents.length > 0) {
+            const postLists = contents.filter((item: ContentItem, index: number) => index > 0);
+            const hl = contents[0];
+
+            setHeadLine(hl);
+            setPosts(postLists)
+        }
+    }, [contents]);
+
     return (
         <>
             <Head>
@@ -49,7 +63,7 @@ export default function Home({ contents }: { contents: any }) {
                     {/* Posts Section */}
                     <div className="flex gap-4">
                         <div className="w-full lg:w-3/4 xl:4/6">
-                            <PostList contents={contents} />
+                            <PostList contents={posts} headline={headLine!} />
                         </div>
 
                         <div className="lg:w-1/4 xl:w-2/6 flex flex-col pl-4 space-y-2 sm:hidden lg:block">

@@ -1,6 +1,9 @@
 import Image from "next/image";
+import { ContentItem } from "../../models/ContentItem";
 
-export default function HeadLine () {
+export default function HeadLine ({ headline }: { headline: ContentItem }) {
+    console.log(headline);
+
     return (
         <div className="card w-full bg-white border rounded-md overflow-hidden relative">
             <div className="w-auto h-[400px]">
@@ -13,9 +16,9 @@ export default function HeadLine () {
                 </picture>
             </div>
             <div className="card-body p-3 mt-4 space-y-1 absolute bg-gray-200 opacity-60 bottom-0">
-                <h1 className="font-medium text-2xl text-gray-800">News Topic</h1>
+                <h1 className="font-medium text-2xl text-gray-800">{headline && headline.wdName}</h1>
                 <p className="lg:text-lg text-gray-600">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Vitae deleniti ea, eius ullam fuga placeat, necessitatibus ratione totam ipsam quia voluptatum! Numquam corrupti et at maxime cupiditate voluptas optio commodi!
+                    {headline && headline.wdDesc}
                 </p>
             </div>
         </div>

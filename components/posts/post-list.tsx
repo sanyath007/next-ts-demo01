@@ -2,14 +2,14 @@ import HeadLine from "./head-line";
 import PostItem from "./post-item";
 import { ContentItem } from "../../models/ContentItem";
 
-export default function PostList ({ contents } : { contents: any }) {
+export default function PostList ({ contents, headline } : { contents: ContentItem[], headline: ContentItem }) {
     return (
         <div className="p-2 mb-2">
             <h1 className="title text-3xl">ข่าวกิจกรรม</h1>
 
             <hr className="my-2" />
 
-            <HeadLine />
+            <HeadLine headline={headline} />
 
             <div className="post-list md:columns-2 lg:columns-3 mt-4 h-full space-y-2">
                 {contents && contents.map((item: ContentItem) => (
