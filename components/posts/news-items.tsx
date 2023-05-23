@@ -1,13 +1,15 @@
+import { ContentItem } from "../../models/ContentItem";
+import { rawMarkup } from "../../utils";
+import moment from "moment";
 
-
-export default function NewsItems() {
+export default function NewsItems({ news }: { news: ContentItem[] }) {
     return (
         <div className="px-2">
             <ul className="mt-2">
-                {[1,2,3,4,5].map((item, index) => (
+                {news && news.map((item, index) => (
                     <li key={index}>
-                        <span className="font-thin text-gray-400 text-sm">19-04-2566</span>
-                        <p className="text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+                        <span className="font-thin text-gray-400 text-sm">{moment(item.wdDate).format('DD-MM-YYYY')}</span>
+                        <p className="text-sm" dangerouslySetInnerHTML={rawMarkup(item?.wdName!)}></p>
 
                         <hr className="my-2" />
                     </li>

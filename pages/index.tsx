@@ -20,15 +20,18 @@ const Map = dynamic(() => import('../components/maps/map-area'), {
 })
 
 export async function getStaticProps() {
-    const res = await axios.get('http://localhost:14478/api/Contents?type=-');
-    const contents = res.data;
+    const resPosts = await axios.get('http://localhost:14478/api/Contents?pageSize=-&type=-');
+    const contents = resPosts.data;
+
+    const resNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Job');
+    const news = resNews.data;
 
     return {
-        props: { contents }
+        props: { contents, news }
     }
 }
 
-export default function Home({ contents }: { contents: any[] }) {
+export default function Home({ contents, news }: { contents: any[], news: any[] }) {
     const [posts, setPosts] = useState<ContentItem[]>([]);
     const [headLine, setHeadLine] = useState<ContentItem>();
 
@@ -75,7 +78,7 @@ export default function Home({ contents }: { contents: any[] }) {
                     <VideoList />
 
                     {/* News Section */}
-                    <NewsList />
+                    <NewsList news={news} />
 
                     {/* Map Section */}
                     {/* <Map /> */}
