@@ -8,11 +8,19 @@ export default function HeadLine ({ headline }: { headline: ContentItem }) {
         <div className="card w-full bg-white border rounded-md overflow-hidden relative">
             <div className="w-auto h-[400px]">
                 <picture>
-                    <img
-                        src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg"
-                        className="w-full"
-                        alt="image"
-                    />
+                    {headline && headline.wdPic ? (
+                        <img
+                            src={`https://www.mhc9dmh.com/data/photo/${headline.wdPic}`}
+                            className="w-full h-[155px]"
+                            alt="image"
+                        />
+                    ) : (
+                        <img
+                            src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg"
+                            className="w-full"
+                            alt="image"
+                        />
+                    )}
                 </picture>
             </div>
             <div className="card-body p-3 mt-4 space-y-1 absolute bg-gray-200 opacity-60 bottom-0">

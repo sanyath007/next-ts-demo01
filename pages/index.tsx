@@ -20,7 +20,7 @@ const Map = dynamic(() => import('../components/maps/map-area'), {
 })
 
 export async function getStaticProps() {
-    const res = await axios.get('http://localhost:14478/api/Contents');
+    const res = await axios.get('http://localhost:14478/api/Contents?type=-');
     const contents = res.data;
 
     return {
