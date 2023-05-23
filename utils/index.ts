@@ -4,3 +4,7 @@ export const getWindowDimensions = function () {
 
     return { width, height }
 }
+
+export const rawMarkup = (content: string) => {
+    return { __html: content }
+}
