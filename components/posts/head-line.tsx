@@ -24,7 +24,7 @@ export default function HeadLine ({ headline }: { headline: ContentItem }) {
                     )}
                 </picture>
             </div>
-            <div className="card-body p-3 mt-4 space-y-1 absolute bg-gray-200 opacity-60 bottom-0">
+            <div className="card-body p-3 mt-4 space-y-1 absolute bg-gray-200 opacity-60 bottom-0 w-full">
                 <h1 className="font-medium text-2xl text-gray-800" dangerouslySetInnerHTML={rawMarkup(headline?.wdName!)}></h1>
                 <p className="lg:text-lg text-gray-600" dangerouslySetInnerHTML={rawMarkup(headline?.wdDesc!)}></p>
             </div>
