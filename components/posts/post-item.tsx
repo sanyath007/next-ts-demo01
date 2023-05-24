@@ -26,9 +26,11 @@ export default function PostItem ({ item }: { item: ContentItem }) {
             </div>
             <div className="card-body p-3 sm:mt-4 md:mt-0 space-y-2 overflow-hidden h-[220px] border">
                 {/* <h1 className="font-medium text-xl" dangerouslySetInnerHTML={rawMarkup(item?.wdName!)}></h1> */}
-                <h1 className="font-medium text-sm">
-                    {stripHtml(item?.wdName!)}
-                </h1>
+                {item?.wdName! ? (
+                    <h1 className="font-medium text-sm">
+                        {item?.wdName! ? stripHtml(item?.wdName!) : ''}
+                    </h1>
+                ) : null}
                 <p className="text-sm sm:text-sm text-gray-600" dangerouslySetInnerHTML={rawMarkup(item?.wdDesc!)}></p>
             </div>
         </div>
