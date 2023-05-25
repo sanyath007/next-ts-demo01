@@ -23,15 +23,23 @@ export async function getStaticProps() {
     const resPosts = await axios.get('http://localhost:14478/api/Contents?pageSize=-&type=-');
     const contents = resPosts.data;
 
-    const resNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Job');
-    const news = resNews.data;
+    const resJobNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Job');
+    const jobNews = resJobNews.data;
+
+    const resPoNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Purchase2');
+    const poNews = resPoNews.data;
+
+    const resOthNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Gallery');
+    const othNews = resOthNews.data;
 
     return {
-        props: { contents, news }
+        props: { contents, jobNews, poNews, othNews }
     }
 }
 
-export default function Home({ contents, news }: { contents: any[], news: any[] }) {
+export default function Home(
+    { contents, jobNews, poNews, othNews }:{ contents: any[], jobNews: any[], poNews: any[], othNews: any[] }
+) {
     const [posts, setPosts] = useState<ContentItem[]>([]);
     const [headLine, setHeadLine] = useState<ContentItem>();
 
@@ -78,7 +86,7 @@ export default function Home({ contents, news }: { contents: any[], news: any[] 
                     <VideoList />
 
                     {/* News Section */}
-                    <NewsList news={news} />
+                    <NewsList news={[ ...jobNews, ...poNews, ...othNews ]} />
 
                     {/* Map Section */}
                     {/* <Map /> */}
