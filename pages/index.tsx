@@ -11,7 +11,7 @@ import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
 import NewsList from '../components/posts/news-list'
 import SlideLogos from '../components/bottom-logos/slide-logos'
-import axios from 'axios'
+import axios, { AxiosResponse } from 'axios'
 import { ContentItem } from '../models/ContentItem'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -20,16 +20,16 @@ const Map = dynamic(() => import('../components/maps/map-area'), {
 })
 
 export async function getStaticProps() {
-    const resPosts = await axios.get('http://localhost:14478/api/Contents?pageSize=-&type=-');
+    const resPosts: AxiosResponse<any, any> = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Relations');
     const contents = resPosts.data;
 
-    const resJobNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Job');
+    const resJobNews = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Job');
     const jobNews = resJobNews.data;
 
-    const resPoNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Purchase2');
+    const resPoNews = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Purchase2');
     const poNews = resPoNews.data;
 
-    const resOthNews = await axios.get('http://localhost:14478/api/Contents?pageSize=10&type=Gallery');
+    const resOthNews = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Gallery');
     const othNews = resOthNews.data;
 
     return {
@@ -53,6 +53,8 @@ export default function Home(
         }
     }, [contents]);
 
+    console.log(jobNews)
+
     return (
         <>
             <Head>
@@ -74,7 +76,7 @@ export default function Home(
                     {/* Posts Section */}
                     <div className="flex gap-4">
                         <div className="w-full lg:w-3/4 xl:4/6">
-                            <PostList contents={posts} headline={headLine!} />
+                            {/* <PostList contents={posts} headline={headLine!} /> */}
                         </div>
 
                         <div className="lg:w-1/4 xl:w-2/6 flex flex-col pl-4 space-y-2 sm:hidden lg:block">
@@ -86,7 +88,7 @@ export default function Home(
                     <VideoList />
 
                     {/* News Section */}
-                    <NewsList news={[ ...jobNews, ...poNews, ...othNews ]} />
+                    {/* {(jobNews && poNews && othNews) &&<NewsList news={[ ...jobNews, ...poNews, ...othNews ]} />} */}
 
                     {/* Map Section */}
                     {/* <Map /> */}
