@@ -227,7 +227,7 @@ export default function NavMenu() {
                                 <Link href="/contact" target="_self">ติดต่อเรา</Link>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="861" href="http://203.157.65.25/complaint/" target="_self">แจ้งเรื่องร้องเรียน</a>
+                                <a href="#" target="_self">ลิงค์ที่เกี่ยวข้อง</a>
                             </div>
                         </div>
                     </div>
