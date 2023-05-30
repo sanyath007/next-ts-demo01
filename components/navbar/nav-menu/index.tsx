@@ -6,9 +6,9 @@ export default function NavMenu() {
     return (
         <div className="bottom-menu" id="topnav-menu-container">
             <div className="menu icon-menu active">
-                <Link href="/" data-label="หน้าหลัก">
+                <a href="/" data-label="หน้าหลัก">
                     <div><FaHome size={'1rem'} /></div>
-                </Link>
+                </a>
             </div>
             <div className="menu has-children ">
                 <a data-mid="816" href="#" target="_self"><div>รู้จักเรา</div></a>
