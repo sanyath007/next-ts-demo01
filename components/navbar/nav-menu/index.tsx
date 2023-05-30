@@ -147,6 +147,9 @@ export default function NavMenu() {
                                 <a data-mid="988" href="https://anamai.moph.go.th/th/complaint/" target="_self">แจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</a>
                             </div> */}
                             <div className="submenu ">
+                                <a data-mid="889" href="https://anamai.moph.go.th/th/webboard" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
+                            </div>
+                            <div className="submenu ">
                                 <a data-mid="889" href="https://anamai.moph.go.th/th/webboard" target="_self">กระดานถาม-ตอบ</a>
                             </div>
                             {/* <div className="submenu has-children">

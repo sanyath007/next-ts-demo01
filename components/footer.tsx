@@ -46,6 +46,7 @@ export default function Footer () {
                         <div className="flex flex-col w-[315px]">
                             <h2 className="font-bold text-md my-2">ติอต่อเรา</h2>
                             <ul className="text-xs font-light space-y-1">
+                                <li><a href="/" className="hover:text-gray-400 font-medium">ศูนย์สุขภาพจิตที่ 9</a></li>
                                 <li>เลขที่ 86 ถ.ช้างเผือก อ.เมือง จ.นครราชสีมา 30000</li>
                                 <li>โทรศัพท์ 0-4425-6729</li>
                                 <li>โทรสาร 0-4425-6730</li>
