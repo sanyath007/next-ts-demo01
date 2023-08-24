@@ -1,3 +1,4 @@
+import VideoHero from "./video-hero";
 
 
 export default function VideoList () {
@@ -8,13 +9,8 @@ export default function VideoList () {
             <hr className="my-2" />
 
             <div className="flex flex-row gap-2 bg-white rounded-md overflow-hidden">
-                <div className="left w-2/3 bg-gray-400 border">
-                    <div className="w-100 h-[460px] relative">
-                        <div className="absolute bottom-0 h-10 w-full bg-gray-300 flex flex-row justify-between items-center px-4">
-                            <a href="#" className="hover:text-gray-200">Video 1</a>
-                            <a href="#" className="text-black hover:text-gray-500 rounded-full bg-white hover:bg-gray-300 px-4">View</a>
-                        </div>
-                    </div>
+                <div className="left w-2/3 border">
+                    <VideoHero />
                 </div>
                 <div className="right w-1/3 flex flex-col gap-4 bg-gray-400 p-3">
                     <div className="w-full flex flex-row gap-3">
