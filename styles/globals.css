@@ -854,7 +854,7 @@ nav.topnav ~ .topnav-spacer {
 }
 
 @media screen and (max-width:1199.98px) {
-  nav.topnav .logo>.text {
+  nav.topnav .logo > .text {
     max-width: 20rem;
   }
   nav.topnav .bottom-menu {
@@ -876,7 +876,7 @@ nav.topnav ~ .topnav-spacer {
   }
   nav.topnav .logo {
     margin: .5rem 0;
-    width: calc(100% - 3.25rem);
+    /* width: calc(100% - 3.25rem); */
   }
   nav.topnav.sticky .logo {
     padding-top: 0;

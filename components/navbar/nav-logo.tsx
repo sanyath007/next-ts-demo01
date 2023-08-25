@@ -9,7 +9,7 @@ export default function NavLogo() {
                     alt="logo"
                 />
             </picture>
-            <div className="flex flex-col justify-center">
+            <div className="flex flex-col justify-center max-md:hidden">
                 <h2 className="p-0 text-3xl">ศูนย์สุขภาพจิตที่ 9</h2>
                 <p className="p-0 text-sm">Mental Health Center 9</p>
             </div>

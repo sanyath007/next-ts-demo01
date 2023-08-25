@@ -13,8 +13,9 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
                     <div className="menu-container w-full">
                         <div className="container mx-auto">
                             <div className="relative flex items-end justify-between pt-1">
-                                {/* Brand */}
+                                {/* ================================ Nav Logo ================================ */}
                                 <NavLogo />
+                                {/* ================================ End Nav Logo ================================ */}
 
                                 {/* ================================ Menu Options ================================ */}
                                 {/* <div className="menu-options flex items-center gap-5">
@@ -56,7 +57,6 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
                                     </div>
                                 </div>
                                 {/* ================================ End nav mobile ================================ */}
-
                             </div>
                         </div>
                     </div>
