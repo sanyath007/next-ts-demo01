@@ -8,7 +8,7 @@ export default function Footer () {
                 <div className="relative flex flex-col">
                     <div className="flex flex-row justify-between py-5">
                         {/* Col */}
-                        <div className="relative flex flex-col">
+                        <div className="relative flex flex-col max-md:hidden">
                             <h2 className="font-bold text-md my-2">รู้จักเรา</h2>
                             <ul className="text-xs font-light space-y-1">
                                 <li><a href="#" className="hover:text-gray-400">ประวัติความเป็นมา</a></li>
@@ -20,7 +20,7 @@ export default function Footer () {
                         </div>
 
                         {/* Col */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col max-md:hidden">
                             <h2 className="font-bold text-md my-2">บริการประชาชน</h2>
                             <ul className="text-xs font-light space-y-1">
                                 <li><a href="#" className="hover:text-gray-400">คู่มือการให้บริการ</a></li>
@@ -32,7 +32,7 @@ export default function Footer () {
                         </div>
 
                         {/* Col */}
-                        <div className="flex flex-col">
+                        <div className="flex flex-col max-md:hidden max-lg:hidden">
                             <h2 className="font-bold text-md my-2">สำหรับเจ้าหน้าที่</h2>
                             <ul className="text-xs font-light space-y-1">
                                 <li><a href="#" className="hover:text-gray-400">ระบบ WPM</a></li>
@@ -43,7 +43,7 @@ export default function Footer () {
                         </div>
 
                         {/* Col */}
-                        <div className="flex flex-col w-[315px]">
+                        <div className="flex flex-col w-[315px] max-md:w-full">
                             <h2 className="font-bold text-md my-2">ติอต่อเรา</h2>
                             <ul className="text-xs font-light space-y-1">
                                 <li><a href="/" className="hover:text-gray-400 font-medium">ศูนย์สุขภาพจิตที่ 9</a></li>
@@ -74,7 +74,7 @@ export default function Footer () {
                             </div>
                         </div>
                     </div>
-                    <div className="flex flex-row items-center justify-between py-1">
+                    <div className="flex flex-row items-center justify-between max-lg:flex-col max-lg:items-start py-1">
                         <div className="flex flex-col">
                             <div className="flex flex-row items-center gap-2 my-1">
                                 <div className="overflow-hidden rounded-md">
@@ -89,15 +89,17 @@ export default function Footer () {
                                 </div>
                             </div>
                             <div className="text-xs font-light flex flex-row items-center">
-                                <Link href="/" className="hover:text-gray-400">นโยบายเว็บไซต์</Link>
-                                <Link href="/" className="hover:text-gray-400 mx-2">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</Link>
-                                <Link href="/" className="hover:text-gray-400">นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์</Link>
+                                <Link href="/" className="hover:text-gray-400 mr-2">นโยบายเว็บไซต์</Link> |
+                                <Link href="/" className="hover:text-gray-400 mx-2">นโยบายการคุ้มครองข้อมูลส่วนบุคคล</Link> |
+                                <Link href="/" className="hover:text-gray-400 ml-2">นโยบายการรักษาความมั่นคงปลอดภัยเว็บไซต์</Link>
                             </div>
                         </div>
-                        <div className="flex flex-col gap-1 w-[315px]">
-                            <p className="text-xs font-light">จำนวนผู้เข้าชม</p>
-                            <div className="rounded-md bg-white h-[25px] w-1/2">
+                        <div className="max-lg:mt-4 mb-2">
+                            <div className="flex flex-col gap-1 w-[315px]">
+                                <p className="text-xs font-light">จำนวนผู้เข้าชม</p>
+                                <div className="rounded-md bg-white h-[25px] w-1/2">
 
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -107,7 +109,7 @@ export default function Footer () {
                 <div className="container mx-auto text-white text-center font-light py-4" style={{ fontSize: '12px' }}>
                     ©2020 ศูนย์สุขภาพจิตที่ 9 All Rights Reserved | DESIGNED BY 
                     <a href="https://www.query-studio.com" target="_blank" rel="noreferrer" className="ml-1">
-                        Query Studio Inc.
+                        นายสัญญา ธรรมวงษ์
                     </a>
                 </div>
             </div>
