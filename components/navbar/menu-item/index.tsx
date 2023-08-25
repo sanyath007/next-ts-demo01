@@ -1,38 +1,32 @@
+import MenuHero from "./menu-hero"
 
 
 export default function MenuItem() {
     return (
         <div className="menu has-children ">
-			<a data-mid="761" href="#" target="_self"><div>ข่าวประชาสัมพันธ์</div></a>
+			<a href="#" target="_self"><div>ข่าวประชาสัมพันธ์</div></a>
                 <div className="submenu-container ">
                 <div className="wrapper">
-                    <div className="hero">
-                        <div className="wrapper" data-src="/assets/app/images/hero/bg-03.jpg">
-                            <h2 className="">ข่าวประชาสัมพันธ์</h2>
-                            <p className=""></p>
-                            <picture>
-                                <img className="" src="/03.png" data-src="/assets/app/images/menu/02.png" alt="" />
-                            </picture>
-                        </div>
-                    </div>
+                    <MenuHero imgSrc="/03.png" />
+
                     <div className="submenus">
                         <div className="submenu ">
-                            <a data-mid="677" href="https://anamai.moph.go.th/th/news-anamai" target="_self">
+                            <a href="https://anamai.moph.go.th/th/news-anamai" target="_self">
                                 ข่าวกิจกรรม
                             </a>
                         </div>
                         {/* <div className="submenu ">
-                            <a data-mid="804" href="https://anamai.moph.go.th/th/news-anamai1" target="_self">
+                            <a href="https://anamai.moph.go.th/th/news-anamai1" target="_self">
                                 ข่าวประชาสัมพันธ์ส่วนกลาง
                             </a>
                         </div>
                         <div className="submenu ">
-                            <a data-mid="678" href="https://anamai.moph.go.th/th/cms-of-77" target="_self">
+                            <a href="https://anamai.moph.go.th/th/cms-of-77" target="_self">
                                 ข่าวประชาสัมพันธ์ส่วนภูมิภาค
                             </a>
                         </div> */}
                         <div className="submenu has-children">
-                            <a data-mid="808" href="#" target="_self">
+                            <a href="#" target="_self">
                                 ข่าวจัดซื้อจัดจ้าง
                             </a>
                             <div className="child-container">
@@ -61,16 +55,16 @@ export default function MenuItem() {
                             </div>
                         </div>
                         {/* <div className="submenu ">
-                            <a data-mid="690" href="https://person.anamai.moph.go.th/th/capital-1" target="_blank">ทุนพัฒนาข้าราชการ</a>
+                            <a href="https://person.anamai.moph.go.th/th/capital-1" target="_blank">ทุนพัฒนาข้าราชการ</a>
                         </div> */}
                         <div className="submenu ">
-                            <a data-mid="864" href="https://person.anamai.moph.go.th/th/cms-of-34" target="_self">ข่าวรับสมัครงาน</a>
+                            <a href="https://person.anamai.moph.go.th/th/cms-of-34" target="_self">ข่าวรับสมัครงาน</a>
                         </div>
                         {/* <div className="submenu ">
-                            <a data-mid="627" href="https://anamai.moph.go.th/th/cms-of-10" target="_self">ข่าวหนังสือพิมพ์</a>
+                            <a href="https://anamai.moph.go.th/th/cms-of-10" target="_self">ข่าวหนังสือพิมพ์</a>
                         </div> */}
                         <div className="submenu ">
-                            <a data-mid="807" href="https://anamai.moph.go.th/th/calendar" target="_self">ปฏิทินกิจกรรม</a>
+                            <a href="https://anamai.moph.go.th/th/calendar" target="_self">ปฏิทินกิจกรรม</a>
                         </div>
                     </div>
                 </div>

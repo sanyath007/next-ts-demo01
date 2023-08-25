@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import { FaHome } from 'react-icons/fa'
-import MenuItem from './menu-item'
+import MenuItem from '../menu-item'
+import MenuHero from '../menu-item/menu-hero'
 
 export default function NavMenu() {
     return (
@@ -11,37 +12,30 @@ export default function NavMenu() {
                 </a>
             </div>
             <div className="menu has-children ">
-                <a data-mid="816" href="#" target="_self"><div>รู้จักเรา</div></a>
+                <a href="#" target="_self"><div>รู้จักเรา</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
-                        <div className="hero">
-                            <div className="wrapper lazy-bg" data-src="/bg-01.jpg">
-                                <h2 className="color0">รู้จักเรา</h2>
-                                <p className="color0"></p>
-                                <picture>
-                                    <img className="lazy-img" src="/01.png" data-src="/assets/app/images/menu/01.png" alt="" />
-                                </picture>
-                            </div>
-                        </div>
+                        <MenuHero imgSrc="/01.png" />
+
                         <div className="submenus">
                             <div className="submenu ">
                                 <Link href="/about" target="_self">ประวัติความเป็นมา</Link>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="835" href="https://anamai.moph.go.th/th/mission-vision" target="_self">วิสัยทัศน์ พันธกิจ</a>
+                                <a href="https://anamai.moph.go.th/th/mission-vision" target="_self">วิสัยทัศน์ พันธกิจ</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="834" href="https://anamai.moph.go.th/th/executive-department-of-health" target="_self">ผู้บริหารหน่วยงาน</a>
+                                <a href="https://anamai.moph.go.th/th/executive-department-of-health" target="_self">ผู้บริหารหน่วยงาน</a>
                             </div>
                             {/* <div className="submenu has-children">
-                                <a data-mid="831" href="#" target="_self">CIO กรมอนามัย</a>
+                                <a href="#" target="_self">CIO กรมอนามัย</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a data-mid="832" href="https://anamai.moph.go.th/th/cio" target="_self">ประวัติ CIO</a>
+                                            <a href="https://anamai.moph.go.th/th/cio" target="_self">ประวัติ CIO</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="833" href="https://anamai.moph.go.th/th/information-and-communication-technology-master-plan-of-the-department-of-health" target="_self">
+                                            <a href="https://anamai.moph.go.th/th/information-and-communication-technology-master-plan-of-the-department-of-health" target="_self">
                                                 แผนปฏิบัติการดิจิทัล
                                             </a>
                                         </div>
@@ -52,23 +46,23 @@ export default function NavMenu() {
                                 <Link href="/structure" target="_self">โครงสร้างองค์กร</Link>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="829" href="https://anamai.moph.go.th/th/mission-and-acceptance-of-work" target="_self">ภารกิจและหน้าที่รับผิดชอบ</a>
+                                <a href="https://anamai.moph.go.th/th/mission-and-acceptance-of-work" target="_self">ภารกิจและหน้าที่รับผิดชอบ</a>
                             </div>
                             {/* <div className="submenu ">
-                                <a data-mid="815" href="https://anamai.moph.go.th/th/web-link" target="_self">หน่วยงานในสังกัดกรมอนามัย</a>
+                                <a href="https://anamai.moph.go.th/th/web-link" target="_self">หน่วยงานในสังกัดกรมอนามัย</a>
                             </div> */}
                             <div className="submenu has-children">
-                                <a data-mid="821" href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
+                                <a href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a data-mid="825" href="http://psdg.anamai.moph.go.th/main.php?filename=agreement2559_psdg" target="_self">ปีงบประมาณ พ.ศ. 2559</a>
+                                            <a href="http://psdg.anamai.moph.go.th/main.php?filename=agreement2559_psdg" target="_self">ปีงบประมาณ พ.ศ. 2559</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="824" href="http://psdg.anamai.moph.go.th/main.php?filename=agreement2558" target="_blank" rel="noreferrer">ปีงบประมาณ พ.ศ. 2558</a>
+                                            <a href="http://psdg.anamai.moph.go.th/main.php?filename=agreement2558" target="_blank" rel="noreferrer">ปีงบประมาณ พ.ศ. 2558</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="823" href="http://psdg.anamai.moph.go.th/main.php?filename=agreement2557" target="_self">ปีงบประมาณ พ.ศ. 2557</a>
+                                            <a href="http://psdg.anamai.moph.go.th/main.php?filename=agreement2557" target="_self">ปีงบประมาณ พ.ศ. 2557</a>
                                         </div>
                                     </div>
                                 </div>
@@ -76,44 +70,44 @@ export default function NavMenu() {
                         </div>
                         <div className="submenus">
                             <div className="submenu ">
-                                <a data-mid="820" href="http://laws.anamai.moph.go.th/main.php?filename=0IndexLaws" target="_self">กฎ ระเบียบ ข้อบังคับ</a>
+                                <a href="http://laws.anamai.moph.go.th/main.php?filename=0IndexLaws" target="_self">กฎ ระเบียบ ข้อบังคับ</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="828" href="https://anamai.moph.go.th/th/manual-standards-of-practice-of-the-department-of-health" target="_self">คู่มือ/ระเบียบปฏิบัติ</a>
+                                <a href="https://anamai.moph.go.th/th/manual-standards-of-practice-of-the-department-of-health" target="_self">คู่มือ/ระเบียบปฏิบัติ</a>
                             </div>
                             {/* <div className="submenu ">
-                                <a data-mid="916" href="https://person.anamai.moph.go.th/" target="_blank" rel="noreferrer">บริหารทรัพยากรบุคคล</a>
+                                <a href="https://person.anamai.moph.go.th/" target="_blank" rel="noreferrer">บริหารทรัพยากรบุคคล</a>
                             </div> */}
                             <div className="submenu has-children">
-                                <a data-mid="980" href="#" target="_self">แผนยุทธศาสตร์</a>
+                                <a href="#" target="_self">แผนยุทธศาสตร์</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a data-mid="985" href="https://planning.anamai.moph.go.th/th/government-action-plan" target="_blank" rel="noreferrer">แผนปฏิบัติราชการ</a>
+                                            <a href="https://planning.anamai.moph.go.th/th/government-action-plan" target="_blank" rel="noreferrer">แผนปฏิบัติราชการ</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="984" href="https://planning.anamai.moph.go.th/th/doh-action-plan" target="_blank" rel="noreferrer">แผนปฏิบัติการ</a>
+                                            <a href="https://planning.anamai.moph.go.th/th/doh-action-plan" target="_blank" rel="noreferrer">แผนปฏิบัติการ</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="983" href="https://planning.anamai.moph.go.th/th/doh-strategic-plan" target="_blank" rel="noreferrer">แผนยุทธศาสตร์</a>
+                                            <a href="https://planning.anamai.moph.go.th/th/doh-strategic-plan" target="_blank" rel="noreferrer">แผนยุทธศาสตร์</a>
                                         </div>
                                         {/* <div className="child">
-                                            <a data-mid="982" href="https://planning.anamai.moph.go.th/th/strategy-management5" target="_blank" rel="noreferrer">แผนระดับ 3 ในความรับผิดชอบ</a>
+                                            <a href="https://planning.anamai.moph.go.th/th/strategy-management5" target="_blank" rel="noreferrer">แผนระดับ 3 ในความรับผิดชอบ</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="981" href="https://anamai.moph.go.th/th/integrated-strategic-plan" target="_self">แผนยุทธศาสตร์บูรณาการ</a>
+                                            <a href="https://anamai.moph.go.th/th/integrated-strategic-plan" target="_self">แผนยุทธศาสตร์บูรณาการ</a>
                                         </div> */}
                                     </div>
                                 </div>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="986" href="https://planning.anamai.moph.go.th/th/data-evaluation9" target="_blank" rel="noreferrer">การกำกับติดตามการดำเนินงาน</a>
+                                <a href="https://planning.anamai.moph.go.th/th/data-evaluation9" target="_blank" rel="noreferrer">การกำกับติดตามการดำเนินงาน</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="987" href="https://planning.anamai.moph.go.th/th/annual-report" target="_blank" rel="noreferrer">รายงานประจำปี</a>
+                                <a href="https://planning.anamai.moph.go.th/th/annual-report" target="_blank" rel="noreferrer">รายงานประจำปี</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="827" href="https://anamai.moph.go.th/th/download-related-documents" target="_self">ดาวน์โหลดเอกสารที่เกี่ยวข้อง</a>
+                                <a href="https://anamai.moph.go.th/th/download-related-documents" target="_self">ดาวน์โหลดเอกสารที่เกี่ยวข้อง</a>
                             </div>
                         </div>
                     </div>
@@ -123,108 +117,93 @@ export default function NavMenu() {
             <MenuItem />
 
             <div className="menu has-children ">
-                <a data-mid="763" href="#" target="_self"><div>บริการประชาชน</div></a>
+                <a href="#" target="_self"><div>บริการประชาชน</div></a>
                 <div className="submenu-container ">
                     <div className="wrapper">
-                        <div className="hero">
-                            <div className="wrapper lazy-bg" data-src="/bg-02.jpg">
-                                <h2 className="color0">บริการประชาชน</h2>
-                                <p className=""></p>
-                                <picture>
-                                    <img className="lazy-img" src="/02.png" data-src="/02.png" alt="" />
-                                </picture>
-                            </div>
-                        </div>
+                        <MenuHero imgSrc="/02.png" />
 
                         <div className="submenus">
                             <div className="submenu ">
-                                <a data-mid="837" href="https://anamai.moph.go.th/th/department-of-health-services-manual" target="_self">คู่มือการให้บริการ</a>
+                                <a href="https://anamai.moph.go.th/th/department-of-health-services-manual" target="_self">คู่มือการให้บริการ</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="838" href="https://complaint.anamai.moph.go.th/" target="_self">แจ้งเรื่องร้องเรียน</a>
+                                <a href="https://complaint.anamai.moph.go.th/" target="_self">แจ้งเรื่องร้องเรียน</a>
                             </div>
                             {/* <div className="submenu ">
-                                <a data-mid="988" href="https://anamai.moph.go.th/th/complaint/" target="_self">แจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</a>
+                                <a href="https://anamai.moph.go.th/th/complaint/" target="_self">แจ้งเรื่องร้องเรียนการทุจริตและประพฤติมิชอบ</a>
                             </div> */}
                             <div className="submenu ">
-                                <a data-mid="889" href="https://anamai.moph.go.th/th/webboard" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
+                                <a href="https://anamai.moph.go.th/th/webboard" target="_self">คำถามที่ถามบ่อย (FAQ)</a>
                             </div>
                             <div className="submenu ">
-                                <a data-mid="889" href="https://anamai.moph.go.th/th/webboard" target="_self">กระดานถาม-ตอบ</a>
+                                <a href="https://anamai.moph.go.th/th/webboard" target="_self">กระดานถาม-ตอบ</a>
                             </div>
                             {/* <div className="submenu has-children">
-                                <a data-mid="839" href="#" target="_self">ความรู้สุขภาพ</a>
+                                <a href="#" target="_self">ความรู้สุขภาพ</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a data-mid="845" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/mom-and-child/" target="_self">อนามัยแม่และเด็ก</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/mom-and-child/" target="_self">อนามัยแม่และเด็ก</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="842" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/elderly/" target="_self">อนามัยผู้สูงอายุ</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/elderly/" target="_self">อนามัยผู้สูงอายุ</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="844" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/teen/" target="_self">อนามัยวัยเรียน วัยรุ่น</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/teen/" target="_self">อนามัยวัยเรียน วัยรุ่น</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="843" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/working-age/" target="_self">อนามัยวัยทำงาน</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/working-age/" target="_self">อนามัยวัยทำงาน</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="634" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/environment/" target="_self">อนามัยสิ่งแวดล้อม</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/environment/" target="_self">อนามัยสิ่งแวดล้อม</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="631" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/dental/" target="_self">ทันตสาธารณสุข</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/dental/" target="_self">ทันตสาธารณสุข</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="841" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/nutrition/" target="_self">โภชนาการ</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/nutrition/" target="_self">โภชนาการ</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="633" href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/exercise/" target="_self">ออกกำลังกายเพื่อสุขภาพ</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/help-knowledge/categories/exercise/" target="_self">ออกกำลังกายเพื่อสุขภาพ</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="840" href="https://anamai.moph.go.th/th/rap-porteur" target="_self">Rap porteur</a>
+                                            <a href="https://anamai.moph.go.th/th/rap-porteur" target="_self">Rap porteur</a>
                                         </div>
                                     </div>
                                 </div>
                             </div> */}
                             <div className="submenu has-children">
-                                <a data-mid="734" href="#" target="_self">สื่อสุขภาพจิต</a>
+                                <a href="#" target="_self">สื่อสุขภาพจิต</a>
                                 <div className="child-container">
                                     <div className="childs">
                                         <div className="child">
-                                            <a data-mid="805" href="https://anamai.moph.go.th/th/vdo-gallery" target="_self">คลิปวีดิโอสุขภาพ</a>
+                                            <a href="https://anamai.moph.go.th/th/vdo-gallery" target="_self">คลิปวีดิโอสุขภาพ</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="735" href="https://anamai.moph.go.th/th/infographic" target="_self">อินโฟกราฟฟิก</a>
+                                            <a href="https://anamai.moph.go.th/th/infographic" target="_self">อินโฟกราฟฟิก</a>
                                         </div>
                                         <div className="child">
-                                            <a data-mid="847" href="https://anamai.moph.go.th/th/ebook" target="_self">วารสารออนไลน์</a>
+                                            <a href="https://anamai.moph.go.th/th/ebook" target="_self">วารสารออนไลน์</a>
                                         </div>
                                         {/* <div className="child">
-                                            <a data-mid="846" href="https://multimedia.anamai.moph.go.th/ebooks/" target="_self">อนามัยบุ๊ค</a>
+                                            <a href="https://multimedia.anamai.moph.go.th/ebooks/" target="_self">อนามัยบุ๊ค</a>
                                         </div> */}
                                     </div>
                                 </div>
                             </div>
                             <div className="submenu">
-                                <a data-mid="860" href="https://anamai.moph.go.th/th/e-services" target="_self">บริการอื่นๆ (E-Services)</a>
+                                <a href="https://anamai.moph.go.th/th/e-services" target="_self">บริการอื่นๆ (E-Services)</a>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div className="menu has-children ">
-                <a data-mid="764" href="#" target="_self"><div>ติดต่อเรา</div></a>
+                <a href="#" target="_self"><div>ติดต่อเรา</div></a>
                 <div className="submenu-container expand-left">
-                    <div className="wrapper">
-                        <div className="hero">
-                            <div className="wrapper lazy-bg" data-src="/bg-03.jpg">
-                                <h2 className="">ติดต่อเรา</h2>
-                                <p className=""></p>
-                                <picture>
-                                    <img className="lazy-img" src="/05.png" data-src="/05.png" alt="" />
-                                </picture>
-                            </div>
-                        </div>
+                    <div className="wrapper">                        
+                        <MenuHero imgSrc="/05.png" />
+
                         <div className="submenus">
                             <div className="submenu ">
                                 <Link href="/contact" target="_self">ติดต่อเรา</Link>
