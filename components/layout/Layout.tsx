@@ -3,9 +3,11 @@ import Navbar from '../navbar'
 import Footer from '../footer'
 import { getWindowDimensions } from '../../utils'
 import { WindowDimension } from '../../models/WindowDimension'
+import Sidebar from '../sidebar/Sidebar'
 
 export default function Layout({ children }: { children: any }) {
     const [screen, setScreen] = useState<WindowDimension>({ width: 0, height: 0 })
+    const [toggleSidebar, setToggleSidebar] = useState(true)
 
     useEffect(() => {
         setScreen(getWindowDimensions())
@@ -22,16 +24,16 @@ export default function Layout({ children }: { children: any }) {
     }, [])
 
     return (
-        <>
-            <div style={{ minHeight: '100vh' }}>
-                <Navbar screenWidth={screen.width} />
+        <div className="relative">
+            <Sidebar isShow={toggleSidebar} />
 
-                <main className="pt-2">
-                    {children}
-                </main>
+            <Navbar screenWidth={screen.width} />
 
-                <Footer />
-            </div>
-        </>
+            <main className="pt-2">
+                {children}
+            </main>
+
+            <Footer />
+        </div>
     )
 }
