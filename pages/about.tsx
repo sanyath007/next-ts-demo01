@@ -10,7 +10,7 @@ export default function About() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <section className="pb-5 pt-[1rem]">
+            <section className="pb-5 pt-[1rem] xl:px-4">
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
                     <h1 className="title text-3xl">ประวัติความเป็นมา</h1>
 

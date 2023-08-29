@@ -70,13 +70,13 @@ export default function Home(
             {/* Section 2 */}
             <OptionMenu />
 
-            <section className="pb-5 xl:px-4">
+            <section className="pb-5 pt-[1.5rem] xl:px-4">
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
 
                     {/* Posts Section */}
                     <div className="flex gap-4">
                         <div className="w-full lg:w-3/4 xl:4/6">
-                            {/* <PostList contents={posts} headline={headLine!} /> */}
+                            <PostList contents={posts} headline={headLine!} />
                         </div>
 
                         <div className="lg:w-1/4 xl:w-2/6 flex flex-col pl-4 space-y-2 sm:hidden lg:block">
