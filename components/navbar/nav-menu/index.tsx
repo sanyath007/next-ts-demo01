@@ -22,10 +22,10 @@ export default function NavMenu() {
                                 <Link href="/about" target="_self">ประวัติความเป็นมา</Link>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">วิสัยทัศน์ พันธกิจ</a>
+                                <Link href="/vision" target="_self">วิสัยทัศน์ พันธกิจ</Link>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ผู้บริหารหน่วยงาน</a>
+                                <Link href="/executives" target="_self">ผู้บริหารหน่วยงาน</Link>
                             </div>
                             {/* <div className="submenu has-children">
                                 <a href="#" target="_self">CIO กรมอนามัย</a>
@@ -209,7 +209,7 @@ export default function NavMenu() {
                                 <Link href="/contact" target="_self">ติดต่อเรา</Link>
                             </div>
                             <div className="submenu ">
-                                <a href="#" target="_self">ลิงค์ที่เกี่ยวข้อง</a>
+                                <Link href="links" target="_self">ลิงค์ที่เกี่ยวข้อง</Link>
                             </div>
                         </div>
                     </div>
