@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useSelector } from 'react-redux';
 import Navbar from '../navbar'
 import Footer from '../footer'
 import { getWindowDimensions } from '../../utils'
@@ -7,7 +8,7 @@ import Sidebar from '../sidebar/Sidebar'
 
 export default function Layout({ children }: { children: any }) {
     const [screen, setScreen] = useState<WindowDimension>({ width: 0, height: 0 })
-    const [toggleSidebar, setToggleSidebar] = useState(true)
+    const { isShowSidebar } = useSelector((state: any) => state.navbar);
 
     useEffect(() => {
         setScreen(getWindowDimensions())
@@ -25,7 +26,7 @@ export default function Layout({ children }: { children: any }) {
 
     return (
         <div className="relative">
-            <Sidebar isShow={toggleSidebar} />
+            <Sidebar isShow={isShowSidebar} />
 
             <Navbar screenWidth={screen.width} />
 
