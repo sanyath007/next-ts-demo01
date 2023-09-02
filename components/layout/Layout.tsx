@@ -1,9 +1,5 @@
 import { useEffect, useState } from 'react'
-<<<<<<< HEAD
 import { useSelector } from 'react-redux';
-=======
-import { useSelector } from 'react-redux/es/exports';
->>>>>>> aa058b3fc3466f7e60e5f8ead85f5bb85ca849d6
 import Navbar from '../navbar'
 import Footer from '../footer'
 import { getWindowDimensions } from '../../utils'

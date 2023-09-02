@@ -1,9 +1,5 @@
 import React from 'react'
-<<<<<<< HEAD
 import { useDispatch } from 'react-redux';
-=======
-import { useDispatch } from 'react-redux/es/exports';
->>>>>>> aa058b3fc3466f7e60e5f8ead85f5bb85ca849d6
 import { toggleSidebar } from '../../features/navbarSlice'
 
 const Sidebar = ({ isShow }: { isShow: boolean }) => {
