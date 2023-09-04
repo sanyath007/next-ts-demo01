@@ -927,14 +927,15 @@ nav.topnav ~ .topnav-spacer {
 }
 /* ================================== End News ================================== */
 
-blockquote {
+.vision-quote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
   margin: 1.5em 10px;
   padding: 0.5em 10px;
   quotes: "\201C""\201D""\2018""\2019";
 }
-blockquote:before {
+
+.vision-quote:before {
   color: #ccc;
   content: open-quote;
   font-size: 4em;
@@ -942,6 +943,118 @@ blockquote:before {
   margin-right: 0.25em;
   vertical-align: -0.4em;
 }
-blockquote p {
+
+.vision-quote p {
   display: inline;
 }
+
+/* Core Values Quote */
+.core__value-quote {
+  padding: 60px 80px 40px;
+  position: relative;
+}
+
+.core__value-quote p {
+  font-size: 35px;
+  font-weight: 700px;
+  text-align: center;
+}
+
+/*blockquote p::before {
+  content: "\f095"; 
+  font-family: FontAwesome;
+  display: inline-block;
+  padding-right: 6px;
+  vertical-align: middle;
+  font-size: 180px;
+}*/
+
+.core__value-quote:before {
+  position: absolute;
+  font-family: 'Font Awesome\ 5 Free';
+  font-weight: 900;
+  font-size: 100px;
+  top: 0;
+  left: 10%;
+  content:"\f10d";
+  color: rgba(0,0,0,0.1);
+}
+
+.core__value-quote::after {
+  content: "";
+  top: 20px;
+  left: 50%;
+  margin-left: -100px;
+  position: absolute;
+  border-bottom: 3px solid #bf0024;
+  height: 3px;
+  width: 200px;
+}
+/* End Core Values Quote */
+
+/* Mission bullet */
+ol.gradient-list > li::before, ol.gradient-list > li {
+  box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
+}
+
+ol.gradient-list {
+  counter-reset: gradient-counter;
+  list-style: none;
+  margin: 1.75rem 0;
+  padding-left: 1rem;
+}
+
+ol.gradient-list > li {
+  background: white;
+  border-radius: 0 0.5rem 0.5rem 0.5rem;
+  counter-increment: gradient-counter;
+  margin-top: 1rem;
+  min-height: 3rem;
+  padding: 1rem 1rem 1rem 3rem;
+  position: relative;
+}
+
+ol.gradient-list > li::before,
+ol.gradient-list > li::after {
+  background: linear-gradient(135deg, #83e4e2 0%, #a2ed56 100%);
+  border-radius: 1rem 1rem 0 1rem;
+  content: "";
+  height: 3rem;
+  left: -1rem;
+  overflow: hidden;
+  position: absolute;
+  top: -1rem;
+  width: 3rem;
+}
+
+ol.gradient-list > li::before {
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  content: counter(gradient-counter);
+  font-size: 1.5em;
+  font-weight: 900;
+  padding: 0.125em 0.25em;
+  z-index: 1;
+}
+
+ol.gradient-list > li:nth-child(10n+1):before {
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.2) 0%, rgba(253, 220, 50, 0.2) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+2):before {
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.4) 0%, rgba(253, 220, 50, 0.4) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+3):before {
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.6) 0%, rgba(253, 220, 50, 0.6) 100%);
+}
+
+ol.gradient-list > li:nth-child(10n+4):before {
+  background: linear-gradient(135deg, rgba(162, 237, 86, 0.8) 0%, rgba(253, 220, 50, 0.8) 100%);
+}
+
+ol.gradient-list > li + li {
+  margin-top: 2rem;
+}
+/* End Mission bullet */

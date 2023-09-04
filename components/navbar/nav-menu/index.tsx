@@ -22,7 +22,7 @@ export default function NavMenu() {
                                 <Link href="/about" target="_self">ประวัติความเป็นมา</Link>
                             </div>
                             <div className="submenu ">
-                                <Link href="/vision" target="_self">วิสัยทัศน์ พันธกิจ</Link>
+                                <Link href="/vision" target="_self">วิสัยทัศน์ พันธกิจ ค่านิยม</Link>
                             </div>
                             <div className="submenu ">
                                 <Link href="/executives" target="_self">ผู้บริหารหน่วยงาน</Link>
