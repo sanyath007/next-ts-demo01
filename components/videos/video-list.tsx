@@ -14,7 +14,7 @@ export default function VideoList () {
                 </div>
                 <div className="right w-1/3 max-lg:w-full flex flex-col gap-4 bg-gray-400 p-3">
                     {[1,2,3].map((video, index) => (
-                        <div className="w-full flex flex-row gap-3">
+                        <div className="w-full flex flex-row gap-3" key={index}>
                             <div className="w-1/2 max-lg:w-3/12 max-lg:h-[80px] flex justify-center items-center bg-white h-[135px] rounded-md">
                                 Video {index+1}
                             </div>
