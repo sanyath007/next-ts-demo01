@@ -1,4 +1,5 @@
 import Head from "next/head"
+import StructureAvatar from "../components/structure/avatar"
 
 export default function Structure() {
     return (
@@ -18,69 +19,191 @@ export default function Structure() {
 
                     <div className="structure h-full my-10">
                         <div className="container">
-                            <h1 className="level-1 rectangle">ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h1>
+                            <div className="level-1 rectangle flex flex-col items-center">
+                                <StructureAvatar size="80px" />
+                                <div>
+                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                    <h1>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h1>
+                                </div>
+                            </div>
                             <ol className="level-2-wrapper">
                                 <li>
-                                    <h2 className="level-2 rectangle">หัวหน้ากลุ่มงานอำนวยการ</h2>
+                                    <div className="level-2 rectangle text-left">
+                                        <StructureAvatar size="70px" />
+                                        <div className="flex flex-col justify-center ml-4">
+                                            <h2 className="">นายทดสอบ ระบบ</h2>
+                                            <h2 className="text-sm font-light">หัวหน้ากลุ่มงานอำนวยการ</h2>
+                                        </div>
+                                    </div>
                                     {/* <ol className="level-3-wrapper border">
                                         <li> */}
                                             {/* <h3 className="level-3 rectangle">หัวหน้ากลุ่มงานอำนวยการ</h3> */}
                                             <ol className="level-4-wrapper">
-                                                <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person D</h4></li>
+                                                <li>
+                                                    <div className="level-4 rectangle">
+                                                        <StructureAvatar />
+                                                        <div className="flex flex-col justify-center ml-4">
+                                                            <h2 className="">นายทดสอบ ระบบ</h2>
+                                                            <h4 className="text-sm font-light">งานธุรการ</h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="level-4 rectangle">
+                                                        <StructureAvatar />
+                                                        <div className="flex flex-col justify-center ml-4">
+                                                            <h2 className="">นายทดสอบ ระบบ</h2>
+                                                            <h4 className="text-sm font-light">งานทรัพยากรบุคคล</h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="level-4 rectangle">
+                                                        <StructureAvatar />
+                                                        <div className="flex flex-col justify-center ml-4">
+                                                            <h2 className="">นายทดสอบ ระบบ</h2>
+                                                            <h4 className="text-sm font-light">งานการเงินและบัญชี</h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="level-4 rectangle">
+                                                        <StructureAvatar />
+                                                        <div className="flex flex-col justify-center ml-4">
+                                                            <h2 className="">นายทดสอบ ระบบ</h2>
+                                                            <h4 className="text-sm font-light">งานพัสดุ</h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="level-4 rectangle">
+                                                        <StructureAvatar />
+                                                        <div className="flex flex-col justify-center ml-4">
+                                                            <h2 className="">นายทดสอบ ระบบ</h2>
+                                                            <h4 className="text-sm font-light">งานเทคโนโลยีสารสนเทศ</h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
+                                                <li>
+                                                    <div className="level-4 rectangle">
+                                                        <StructureAvatar />
+                                                        <div className="flex flex-col justify-center ml-4">
+                                                            <h2 className="">นายทดสอบ ระบบ</h2>
+                                                            <h4 className="text-sm font-light">งานยานพาหนะ</h4>
+                                                        </div>
+                                                    </div>
+                                                </li>
                                             </ol>
                                         {/* </li>
-                                        <li>
-                                            <h3 className="level-3 rectangle">Manager B</h3>
-                                            <ol className="level-4-wrapper">
-                                                <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person D</h4></li>
-                                            </ol>
-                                        </li>
                                     </ol> */}
                                 </li>
                                 <li>
-                                    <h2 className="level-2 rectangle">หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h2>
-                                    <ol className="level-3-wrapper">
+                                    <div className="level-2 rectangle text-left">
+                                        <StructureAvatar size="70px" />
+                                        <div className="flex flex-col justify-center ml-4">
+                                        <h2 className="">นายทดสอบ ระบบ</h2>
+                                            <h2 className="text-sm font-light">หัวหน้ากลุ่มงานวิชาการสุขภาพจิต</h2>
+                                        </div>
+                                    </div>
+                                    <ol className="level-4-wrapper">
                                         <li>
-                                            <h3 className="level-3 rectangle">Manager C</h3>
-                                            {/* <ol className="level-4-wrapper">
-                                                <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person D</h4></li>
-                                            </ol> */}
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h4 className="text-sm font-light">งานพัฒนาคุณภาพ</h4>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h3 className="level-3 rectangle">Manager D</h3>
-                                            {/* <ol className="level-4-wrapper">
-                                                <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person D</h4></li>
-                                            </ol> */}
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานวิจัยและพัฒนา</h3>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h3 className="level-3 rectangle">Manager E</h3>
-                                            {/* <ol className="level-4-wrapper">
-                                                <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person D</h4></li>
-                                            </ol> */}
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานแผนงานและประเมินผล</h3>
+                                                </div>
+                                            </div>
                                         </li>
                                         <li>
-                                            <h3 className="level-3 rectangle">Manager F</h3>
-                                            {/* <ol className="level-4-wrapper">
-                                                <li><h4 className="level-4 rectangle">Person A</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person B</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person C</h4></li>
-                                                <li><h4 className="level-4 rectangle">Person D</h4></li>
-                                            </ol> */}
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานพัฒนาเครือข่ายสุขภาพจิต</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานนิเทศและติดตาม</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานสุขภาพจิตกลุ่มวัย</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานสุขภาพจิตในระบบบริการปฐมภูมิ</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานวิกฤตสุขภาพจิต</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานเฝ้าระวังและป้องกันการฆ่าตัวตาย</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานสื่อสารและประชาสัมพันธ์</h3>
+                                                </div>
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <div className="level-4 rectangle4">
+                                                <StructureAvatar size="60px" />
+                                                <div className="flex flex-col justify-center ml-4">
+                                                    <h2 className="">นายทดสอบ ระบบ</h2>
+                                                    <h3 className="text-sm font-light">งานสุขภาพจิตระหว่างประเทศ</h3>
+                                                </div>
+                                            </div>
                                         </li>
                                     </ol>
                                 </li>
