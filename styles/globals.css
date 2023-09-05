@@ -5,8 +5,9 @@
 @tailwind components;
 @tailwind utilities;
 
+/* ================================== Global ================================== */
 :root {
-  /* Themes */
+  /* Theme colors */
   --color0:#47484d;
   --color1:#c0ca67;
   --color2:#1d684a;
@@ -14,24 +15,27 @@
   --color4:#0d838d;
   --color5:#d7d8d0;
 
-  /* Swiper slide */
+  /* Swiper slide colors */
   --swiper-navigation-color: #E49A38;
 
-  /* Structure */
+  /* Organization Structure colors */
   --level-1: #8dccad;
-  --level-2: #f5cc7f;
+  --level-2: #F9E8B2;
   --level-3: #7b9fe0;
-  --level-4: #f27c8d;
+  --level-4: #FADBD8;
   --black: black;
 }
+
 * {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
+
 html {
   scroll-behavior: smooth;
 }
+
 body {
   max-width: 100vw;
   overflow-x: hidden;
@@ -39,7 +43,7 @@ body {
   font-family: 'Prompt', sans-serif;
 }
 
-/* Scrollbar */
+/* ================================== Scrollbar ================================== */
 body::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
 }
@@ -59,403 +63,7 @@ a {
   text-decoration: none;
 }
 
-/* main container */
-main {
-  min-height: 80vh;
-  margin-top: 4.5rem;
-}
-@media screen and (max-width:1199.98px) {
-  main {
-    margin-top: 4.8rem;
-  }
-}
-
-/* Structure */
-ol {
-  list-style: none;
-  text-align: center;
-}
-
-.rectangle {
-  position: relative;
-  padding: 20px;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-}
-
-/* LEVEL-1 STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.level-1 {
-  width: 50%;
-  margin: 0 auto 40px;
-  background: var(--level-1);
-  text-align: center;
-}
-
-.level-1::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 20px;
-  background: var(--black);
-}
-
-/* LEVEL-2 STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.level-2-wrapper {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-}
-
-/* Horizontal tree's branch */
-.level-2-wrapper::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: 25%;
-  width: 50%;
-  height: 2px;
-  background: var(--black);
-}
-
-.level-2-wrapper::after {
-  display: none;
-  content: "";
-  position: absolute;
-  left: -20px;
-  bottom: -20px;
-  width: calc(100% + 20px);
-  height: 2px;
-  background: var(--black);
-}
-
-.level-2-wrapper li {
-  position: relative;
-}
-
-/* Top vertical tree's branch */
-.level-2-wrapper > li::before {
-  content: "";
-  position: absolute;
-  bottom: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 20px;
-  background: var(--black);
-}
-
-.level-2-wrapper > li > div {
-  @apply flex flex-row justify-center
-}
-
-.level-2 {
-  width: 70%;
-  margin: 0 auto 40px;
-  background: var(--level-2);
-}
-
-/* Lower vertical tree's branch */
-.level-2::before {
-  content: "";
-  position: absolute;
-  top: 100%;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 2px;
-  height: 20px;
-  background: var(--black);
-}
-
-.level-2::after {
-  display: none;
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-100%, -50%);
-  width: 20px;
-  height: 2px;
-  background: var(--black);
-}
-
-
-/* LEVEL-3 STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.level-3-wrapper {
-  position: relative;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-column-gap: 20px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-/* Horizontal tree's branch */
-.level-3-wrapper::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: calc(25% - 5px);
-  width: calc(50% + 10px);
-  height: 2px;
-  background: var(--black);
-}
-
-/* Lower vertical tree's branch */
-.level-3-wrapper > li::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 50%;
-  transform: translate(-50%, -100%);
-  width: 2px;
-  height: 20px;
-  background: var(--black);
-}
-
-.level-3 {
-  margin-bottom: 20px;
-  background: var(--level-3);
-}
-
-
-/* LEVEL-4 STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-.level-4-wrapper {
-  position: relative;
-  width: 80%;
-  margin-left: auto;
-  text-align: left;
-}
-
-/* Vertical tree's branch */
-.level-4-wrapper::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: -20px;
-  width: 2px;
-  height: calc(100% + 20px);
-  background: var(--black);
-}
-
-/* Horizontal tree's branch */
-.level-4-wrapper > :first-child::before {
-  content: "";
-  position: absolute;
-  top: -20px;
-  left: calc(-20px);
-  width: calc(50%);
-  height: 2px;
-  background: var(--black);
-}
-
-.level-4-wrapper li + li {
-  margin-top: 20px;
-}
-
-.level-4-wrapper li > div {
-  @apply flex flex-row m-0 p-2
-  
-}
-
-.level-4 {
-  font-weight: normal;
-  background: var(--level-4);
-}
-
-.level-4::before {
-  content: "";
-  position: absolute;
-  top: 50%;
-  left: 0%;
-  transform: translate(-100%, -50%);
-  width: 20px;
-  height: 2px;
-  background: var(--black);
-}
-
-
-/* MQ STYLES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-@media screen and (max-width: 700px) {
-  .rectangle {
-    padding: 20px 10px;
-  }
-
-  .level-1,
-  .level-2 {
-    width: 100%;
-  }
-
-  .level-1 {
-    margin-bottom: 20px;
-  }
-
-  .level-1::before,
-  .level-2-wrapper > li::before {
-    display: none;
-  }
-  
-  .level-2-wrapper,
-  .level-2-wrapper::after,
-  .level-2::after {
-    display: block;
-  }
-
-  .level-2-wrapper {
-    width: 90%;
-    margin-left: 10%;
-  }
-
-  .level-2-wrapper::before {
-    left: -20px;
-    width: 2px;
-    height: calc(100% + 40px);
-  }
-
-  .level-2-wrapper > li:not(:first-child) {
-    margin-top: 50px;
-  }
-}
-
-/* Section 2 */
-#section-2 {
-  position: relative;
-  width: 100%;
-  margin: 0;
-  display: flex;
-  justify-content: center;
-  box-shadow: rgb(58 45 45 / 25%) 0 8px 16px;
-  overflow: visible;
-}
-
-.ellipsis-1 {
-  display: -webkit-box;
-  height: 25px;
-  line-height: 25px;
-  -webkit-line-clamp: 1;
-  -webkit-box-orient: vertical;
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-
-#section-2 .contents {
-  @apply flex justify-end flex-wrap w-full;
-}
-
-#section-2 .contents .content {
-  @apply block;
-  width: calc(100% / 8)
-}
-
-#section-2 .contents .content .wrapper {
-  @apply relative w-full;
-}
-
-#section-2 .contents .content h6 {
-  color: #000;
-  margin: .9375rem 0 0 0;
-  font-size: .80rem;
-  font-weight: 300;
-  z-index: 2;
-  transition: color .3s;
-}
-
-#section-2 .contents .content .text-container {
-  @apply relative text-center;
-  font-size: 12px;
-  padding: 1.0625rem .25rem;
-}
-
-#section-2 .content .text-container::before {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 100%;
-  left: 0;
-  right: 0;
-  z-index: 1;
-  transition: bottom .3s;
-}
-
-#section-2 .contents .content:not(:last-child) .text-container::after {
-  content: '';
-  position: absolute;
-  top: .625rem;
-  bottom: .625rem;
-  right: -.5px;
-  width: 1px;
-  background: #e1e2e3;
-  transition: background .3s;
-}
-
-#section-2 .contents .content .banner {
-  position: absolute;
-  top: 100%;
-  bottom: -3.3125rem;
-  left: 0;
-  right: 0;
-  padding: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  font-size: 1.5rem;
-  color: #fff;
-  transition: top .3s, font-size .3s, padding-top .3s;
-}
-
-#section-2 .contents .content:first-child .banner {
-  border-radius: 0 0 0 1.125rem;
-  background: #96ac40;
-}
-
-#section-2 .contents .content:last-child .banner {
-  border-radius: 0 0 1.125rem 0;
-  background: #0d838d;
-}
-
-#section-2 .contents .content:nth-child(8n+2) .banner {
-  background: #ecd150;
-}
-
-#section-2 .contents .content:nth-child(8n+3) .banner {
-  background: #5b8bb1;
-}
-
-#section-2 .contents .content:nth-child(8n+4) .banner {
-  background: #58c8bc;
-}
-
-#section-2 .contents .content:nth-child(8n+5) .banner {
-  background: #fe9a42;
-}
-
-#section-2 .contents .content:nth-child(8n+6) .banner {
-  background: #d0505d;
-}
-
-#section-2 .contents .content:nth-child(8n+7) .banner {
-  background: #f0c195;
-}
-
-#section-2 .contents .content .order {
-  position: absolute;
-  top: .75rem;
-  left: calc(50% - .41875rem);
-  font-size: 1.125rem;
-  font-weight: 300;
-  line-height: 1;
-  color: #808080;
-  transition: color .3s,top .3s,left .3s,font-size .3s;
-}
-
 /* ================================== Nav Menu ================================== */
-/* Themes */
 nav.topnav {
   background:#fff;
   /* border-color:#ebebeb; */
@@ -937,11 +545,415 @@ nav.topnav ~ .topnav-spacer {
 }
 /* ================================== End Nav Menu ================================== */
 
+/* main container */
+main {
+  min-height: 80vh;
+  margin-top: 4.5rem;
+}
+@media screen and (max-width:1199.98px) {
+  main {
+    margin-top: 4.8rem;
+  }
+}
+
+/* Section 1 (Slide heros) */
+
+
+/* Section 2 (Option menu) */
+#section-2 {
+  position: relative;
+  width: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  box-shadow: rgb(58 45 45 / 25%) 0 8px 16px;
+  overflow: visible;
+}
+
+.ellipsis-1 {
+  display: -webkit-box;
+  height: 25px;
+  line-height: 25px;
+  -webkit-line-clamp: 1;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+#section-2 .contents {
+  @apply flex justify-end flex-wrap w-full;
+}
+
+#section-2 .contents .content {
+  @apply block;
+  width: calc(100% / 8)
+}
+
+#section-2 .contents .content .wrapper {
+  @apply relative w-full;
+}
+
+#section-2 .contents .content h6 {
+  color: #000;
+  margin: .9375rem 0 0 0;
+  font-size: .80rem;
+  font-weight: 300;
+  z-index: 2;
+  transition: color .3s;
+}
+
+#section-2 .contents .content .text-container {
+  @apply relative text-center;
+  font-size: 12px;
+  padding: 1.0625rem .25rem;
+}
+
+#section-2 .content .text-container::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  transition: bottom .3s;
+}
+
+#section-2 .contents .content:not(:last-child) .text-container::after {
+  content: '';
+  position: absolute;
+  top: .625rem;
+  bottom: .625rem;
+  right: -.5px;
+  width: 1px;
+  background: #e1e2e3;
+  transition: background .3s;
+}
+
+#section-2 .contents .content .banner {
+  position: absolute;
+  top: 100%;
+  bottom: -3.3125rem;
+  left: 0;
+  right: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.5rem;
+  color: #fff;
+  transition: top .3s, font-size .3s, padding-top .3s;
+}
+
+#section-2 .contents .content:first-child .banner {
+  border-radius: 0 0 0 1.125rem;
+  background: #96ac40;
+}
+
+#section-2 .contents .content:last-child .banner {
+  border-radius: 0 0 1.125rem 0;
+  background: #0d838d;
+}
+
+#section-2 .contents .content:nth-child(8n+2) .banner {
+  background: #ecd150;
+}
+
+#section-2 .contents .content:nth-child(8n+3) .banner {
+  background: #5b8bb1;
+}
+
+#section-2 .contents .content:nth-child(8n+4) .banner {
+  background: #58c8bc;
+}
+
+#section-2 .contents .content:nth-child(8n+5) .banner {
+  background: #fe9a42;
+}
+
+#section-2 .contents .content:nth-child(8n+6) .banner {
+  background: #d0505d;
+}
+
+#section-2 .contents .content:nth-child(8n+7) .banner {
+  background: #f0c195;
+}
+
+#section-2 .contents .content .order {
+  position: absolute;
+  top: .75rem;
+  left: calc(50% - .41875rem);
+  font-size: 1.125rem;
+  font-weight: 300;
+  line-height: 1;
+  color: #808080;
+  transition: color .3s,top .3s,left .3s,font-size .3s;
+}
+
+/* Section 3 (Content) */
+
+
 /* ================================== End Leaflet Map ================================== */
 .leaflet-pane {
   z-index: 1 !important;
 }
 /* ================================== End Leaflet Map ================================== */
+
+/* ================================== Organization structure ================================== */
+ol {
+  list-style: none;
+  text-align: center;
+}
+
+.rectangle {
+  position: relative;
+  padding: 20px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  
+}
+
+/* LEVEL-1 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-1 {
+  width: 50%;
+  margin: 0 auto 40px;
+  background: var(--level-1);
+  text-align: center;
+  @apply flex flex-row justify-center items-center max-md:flex-col max-md:items-center gap-4 text-left max-md:text-center p-2 w-2/5 max-lg:w-3/5 rounded-md;
+}
+
+.level-1::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+
+/* LEVEL-2 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-2-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+}
+
+/* Horizontal tree's branch */
+.level-2-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 25%;
+  width: 50%;
+  height: 2px;
+  background: var(--black);
+}
+
+.level-2-wrapper::after {
+  display: none;
+  content: "";
+  position: absolute;
+  left: -20px;
+  bottom: -20px;
+  width: calc(100% + 20px);
+  height: 2px;
+  background: var(--black);
+}
+
+.level-2-wrapper li {
+  position: relative;
+}
+
+/* Top vertical tree's branch */
+.level-2-wrapper > li::before {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+
+.level-2-wrapper > li > div {
+  @apply flex flex-row justify-center max-md:flex-col max-md:items-center text-left max-md:text-center p-2 w-3/5 max-lg:w-4/5 rounded-md;
+}
+
+.level-2 {
+  width: 70%;
+  margin: 0 auto 40px;
+  background: var(--level-2);
+}
+
+/* Lower vertical tree's branch */
+.level-2::before {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+
+.level-2::after {
+  display: none;
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 2px;
+  background: var(--black);
+}
+
+
+/* LEVEL-3 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-3-wrapper {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-column-gap: 20px;
+  width: 90%;
+  margin: 0 auto;
+}
+
+/* Horizontal tree's branch */
+.level-3-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: calc(25% - 5px);
+  width: calc(50% + 10px);
+  height: 2px;
+  background: var(--black);
+}
+
+/* Lower vertical tree's branch */
+.level-3-wrapper > li::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%, -100%);
+  width: 2px;
+  height: 20px;
+  background: var(--black);
+}
+
+.level-3 {
+  margin-bottom: 20px;
+  background: var(--level-3);
+}
+
+
+/* LEVEL-4 STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+.level-4-wrapper {
+  position: relative;
+  width: 80%;
+  margin-left: auto;
+  text-align: left;
+}
+
+/* Vertical tree's branch */
+.level-4-wrapper::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: -20px;
+  width: 2px;
+  height: calc(100% + 20px);
+  background: var(--black);
+}
+
+/* Horizontal tree's branch */
+.level-4-wrapper > :first-child::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: calc(-20px);
+  width: calc(50%);
+  height: 2px;
+  background: var(--black);
+}
+
+.level-4-wrapper li + li {
+  margin-top: 20px;
+}
+
+.level-4-wrapper li > div {
+  @apply flex flex-row m-0 p-2 rounded-md;
+  
+}
+
+.level-4 {
+  font-weight: normal;
+  background: var(--level-4);
+}
+
+.level-4::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0%;
+  transform: translate(-100%, -50%);
+  width: 20px;
+  height: 2px;
+  background: var(--black);
+}
+
+
+/* MQ STYLES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+@media screen and (max-width: 700px) {
+  .rectangle {
+    padding: 20px 10px;
+  }
+
+  .level-1,
+  .level-2 {
+    width: 100%;
+  }
+
+  .level-1 {
+    margin-bottom: 20px;
+  }
+
+  .level-1::before,
+  .level-2-wrapper > li::before {
+    display: none;
+  }
+  
+  .level-2-wrapper,
+  .level-2-wrapper::after,
+  .level-2::after {
+    display: block;
+  }
+
+  .level-2-wrapper {
+    width: 90%;
+    margin-left: 10%;
+  }
+
+  .level-2-wrapper::before {
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 40px);
+  }
+
+  .level-2-wrapper > li:not(:first-child) {
+    margin-top: 50px;
+  }
+}
+/* ================================== End organization structure ================================== */
 
 /* ================================== News ================================== */
 .news-topic {
@@ -953,6 +965,7 @@ nav.topnav ~ .topnav-spacer {
 }
 /* ================================== End News ================================== */
 
+/* ================================== Vision Quote ================================== */
 .vision-quote {
   background: #f9f9f9;
   border-left: 10px solid #ccc;
@@ -973,8 +986,9 @@ nav.topnav ~ .topnav-spacer {
 .vision-quote p {
   display: inline;
 }
+/* ================================== End Vision Quote ================================== */
 
-/* Core Values Quote */
+/* ================================== End Core Values Quote ================================== */
 .core__value-quote {
   padding: 60px 80px 40px;
   position: relative;
@@ -1016,9 +1030,9 @@ nav.topnav ~ .topnav-spacer {
   height: 3px;
   width: 200px;
 }
-/* End Core Values Quote */
+/* ================================== End Core Values Quote ================================== */
 
-/* Mission bullet */
+/* ================================== Mission bullet ================================== */
 ol.gradient-list > li::before, ol.gradient-list > li {
   box-shadow: 0.25rem 0.25rem 0.6rem rgba(0, 0, 0, 0.05), 0 0.5rem 1.125rem rgba(75, 0, 0, 0.05);
 }
@@ -1083,4 +1097,4 @@ ol.gradient-list > li:nth-child(10n+4):before {
 ol.gradient-list > li + li {
   margin-top: 2rem;
 }
-/* End Mission bullet */
+/* ================================== End Mission bullet ================================== */

@@ -64,10 +64,10 @@ export default function Home(
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* Section 1 */}
+            {/* Section 1 (Slide heros) */}
             <SlideHeros />
 
-            {/* Section 2 */}
+            {/* Section 2 (Option menu) */}
             <OptionMenu />
 
             <section className="pb-5 pt-[1.5rem] xl:px-4">

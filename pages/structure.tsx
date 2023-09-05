@@ -19,20 +19,20 @@ export default function Structure() {
 
                     <div className="structure h-full my-10">
                         <div className="container">
-                            <div className="level-1 rectangle flex flex-col items-center">
+                            <div className="level-1 rectangle">
                                 <StructureAvatar size="80px" />
                                 <div>
                                     <h2 className="">นายทดสอบ ระบบ</h2>
-                                    <h1>ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h1>
+                                    <h4 className="text-sm font-light">ผู้อำนวยการศูนย์สุขภาพจิตที่ 9</h4>
                                 </div>
                             </div>
                             <ol className="level-2-wrapper">
                                 <li>
-                                    <div className="level-2 rectangle text-left">
+                                    <div className="level-2 rectangle">
                                         <StructureAvatar size="70px" />
                                         <div className="flex flex-col justify-center ml-4">
                                             <h2 className="">นายทดสอบ ระบบ</h2>
-                                            <h2 className="text-sm font-light">หัวหน้ากลุ่มงานอำนวยการ</h2>
+                                            <h4 className="text-sm font-light">หัวหน้ากลุ่มงานอำนวยการ</h4>
                                         </div>
                                     </div>
                                     {/* <ol className="level-3-wrapper border">
