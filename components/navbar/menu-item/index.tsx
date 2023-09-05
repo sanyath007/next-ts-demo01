@@ -1,13 +1,12 @@
 import MenuHero from "./menu-hero"
 
-
 export default function MenuItem() {
     return (
         <div className="menu has-children ">
 			<a href="#" target="_self"><div>ข่าวประชาสัมพันธ์</div></a>
                 <div className="submenu-container ">
                 <div className="wrapper">
-                    <MenuHero imgSrc="/03.png" />
+                    {/* <MenuHero imgSrc="/03.png" /> */}
 
                     <div className="submenus">
                         <div className="submenu ">
