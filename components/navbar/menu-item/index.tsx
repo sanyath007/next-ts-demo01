@@ -1,3 +1,4 @@
+import Link from "next/link"
 import MenuHero from "./menu-hero"
 
 export default function MenuItem() {
@@ -61,7 +62,7 @@ export default function MenuItem() {
                             <a href="#" target="_self">ข่าวหนังสือพิมพ์</a>
                         </div> */}
                         <div className="submenu ">
-                            <a href="#" target="_self">ปฏิทินกิจกรรม</a>
+                            <Link href="/calendar" target="_self">ปฏิทินกิจกรรม</Link>
                         </div>
                     </div>
                 </div>

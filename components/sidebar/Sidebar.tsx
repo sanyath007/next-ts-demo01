@@ -65,7 +65,7 @@ const Sidebar = ({ isShow }: { isShow: boolean }) => {
                                     </ul>    
                                 </li>
                                 <li><a href="">ข่าวรับสมัครงาน</a></li>
-                                <li><a href="">ปฏิทินกิจกรรม</a></li>
+                                <li><Link href="/calendar" onClick={() => dispatch(toggleSidebar())}>ปฏิทินกิจกรรม</Link></li>
                             </ul>
                         </li>
                         <li className="has-sub">
