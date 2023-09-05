@@ -20,11 +20,11 @@ const Sidebar = ({ isShow }: { isShow: boolean }) => {
                         <li className="has-sub">
                             <a href="">รู้จักเรา</a>
                             <ul>
-                                <li><Link href="/about">ประวัติความเป็นมา</Link></li>
-                                <li><Link href="/vision">วิสัยทัศน์ พันธกิจ ค่านิยม</Link></li>
-                                <li><Link href="/executives">ผู้บริหารหน่วยงาน</Link></li>
-                                <li><Link href="/structure">โครงสร้างองค์กร</Link></li>
-                                <li><Link href="/mission">ภารกิจและหน้าที่รับผิดชอบ</Link></li>
+                                <li><Link href="/about" onClick={() => dispatch(toggleSidebar())}>ประวัติความเป็นมา</Link></li>
+                                <li><Link href="/vision" onClick={() => dispatch(toggleSidebar())}>วิสัยทัศน์ พันธกิจ ค่านิยม</Link></li>
+                                <li><Link href="/executives" onClick={() => dispatch(toggleSidebar())}>ผู้บริหารหน่วยงาน</Link></li>
+                                <li><Link href="/structure" onClick={() => dispatch(toggleSidebar())}>โครงสร้างองค์กร</Link></li>
+                                <li><Link href="/mission" onClick={() => dispatch(toggleSidebar())}>ภารกิจและหน้าที่รับผิดชอบ</Link></li>
                             </ul>
                         </li>
                         <li className="has-sub">
@@ -48,8 +48,8 @@ const Sidebar = ({ isShow }: { isShow: boolean }) => {
                         <li className="has-sub">
                             <a href="">ติดต่อเรา</a>
                             <ul>
-                                <li><Link href="/contact">ติดต่อเรา</Link></li>
-                                <li><Link href="/links">ลิงค์ที่เกี่ยวข้อง</Link></li>
+                                <li><Link href="/contact" onClick={() => dispatch(toggleSidebar())}>ติดต่อเรา</Link></li>
+                                <li><Link href="/links" onClick={() => dispatch(toggleSidebar())}>ลิงค์ที่เกี่ยวข้อง</Link></li>
                             </ul>
                         </li>
                     </ul>
