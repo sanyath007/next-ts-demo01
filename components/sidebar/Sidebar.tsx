@@ -1,13 +1,26 @@
-import React from 'react'
+import React, { useEffect, useRef } from 'react'
 import Link from 'next/link'
 import { useDispatch } from 'react-redux';
-import { toggleSidebar } from '../../features/navbarSlice'
+import { hideSidebar, toggleSidebar } from '../../features/navbarSlice'
 
 const Sidebar = ({ isShow }: { isShow: boolean }) => {
     const dispatch = useDispatch();
+    const sidebarRef = useRef<any>(null);
+
+    useEffect(() => {
+        window.document.addEventListener('mousedown', handleClickOutside);
+
+        return () => window.document.removeEventListener('mousedown', handleClickOutside);
+    }, []);
+
+    const handleClickOutside = (e: MouseEvent) => {
+        if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+            dispatch(hideSidebar());
+        }
+    };
 
     return (
-        <div className={`sidebar ${isShow ? 'block' : 'hidden'}`}>
+        <div className={`sidebar ${isShow ? 'block' : 'hidden'}`} ref={sidebarRef}>
             <div className="sidebar-wrapper">
                 <a href='#' className="absolute top-2 right-2 cursor-pointer" onClick={() => dispatch(toggleSidebar())}>
                     <span className="border rounded-full w-[20px] h-[20px] flex justify-center items-center text-white hover:text-black hover:bg-white">
@@ -16,7 +29,7 @@ const Sidebar = ({ isShow }: { isShow: boolean }) => {
                 </a>
                 <div className="navigation">
                     <ul>
-                        <li><a href="/">หน้าหลัก</a></li>
+                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>หน้าหลัก</Link></li>
                         <li className="has-sub">
                             <a href="">รู้จักเรา</a>
                             <ul>
