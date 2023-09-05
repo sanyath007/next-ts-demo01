@@ -4,7 +4,7 @@ import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLine, FaMapMarkerAlt }
 export default function Footer () {
     return (
         <footer className="absolute h-auto w-full" style={{ background: '#06693a'}}>
-            <div className="container mx-auto text-white xl:px-4" style={{ fontSize: '0.875rem' }}>
+            <div className="container mx-auto text-white lg:px-4 xl:px-4" style={{ fontSize: '0.875rem' }}>
                 <div className="relative flex flex-col">
                     <div className="flex flex-row justify-between py-5">
                         {/* Col */}

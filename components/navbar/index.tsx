@@ -10,7 +10,7 @@ export default function Navbar({ screenWidth, ...props }: { screenWidth: number 
 
     return (
         <nav className="topnav bg-white">
-            <div className="container mx-auto xl:px-4">
+            <div className="container mx-auto lg:px-4 xl:px-4">
                 <div className="wrapper w-full">
                     <div className="menu-container w-full">
                         <div className="container mx-auto">
