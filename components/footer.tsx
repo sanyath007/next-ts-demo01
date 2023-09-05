@@ -1,7 +1,15 @@
+import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLine, FaMapMarkerAlt } from 'react-icons/fa'
+import CookieConsent from './cookie-consent/CookieConsent';
 
 export default function Footer () {
+    const [showCookieConsent, setShowCookieConsent] = useState(false);
+
+    useEffect(() => {
+        setShowCookieConsent(true);
+    }, []);
+
     return (
         <footer className="absolute h-auto w-full" style={{ background: '#06693a'}}>
             <div className="container mx-auto text-white lg:px-4 xl:px-4" style={{ fontSize: '0.875rem' }}>
@@ -113,6 +121,11 @@ export default function Footer () {
                     </a>
                 </div>
             </div>
+
+            <CookieConsent
+                isShow={showCookieConsent}
+                onHide={() => setShowCookieConsent(false)}
+            />
         </footer>
     )
 }

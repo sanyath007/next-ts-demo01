@@ -1226,3 +1226,41 @@ ol.gradient-list > li + li {
 }
 /* ================================== End Mission bullet ================================== */
 
+
+/* ================================== Cookie Consent ================================== */
+.cookie-consent {
+  @apply bottom-5 left-5 min-h-[180px] w-[280px] z-[900] bg-white rounded-md;
+  position: fixed;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.15);
+}
+
+.cookie-consent a {
+  color: #4D4D4D;
+}
+
+.cookie-consent a:hover {
+  text-decoration: underline;
+}
+
+.cookie-consent button {
+  @apply px-5 py-2 border rounded-md font-normal text-sm;
+  background: #D8D8D8;
+}
+
+.cookie-consent button:hover {
+  text-decoration: underline;
+  background: #4D4D4D;
+  color: white;
+}
+
+.cookie-consent button.btn-accept {
+  background: #4D4D4D;
+  color: white;
+}
+
+.cookie-consent button.btn-accept:hover {
+  background: #D8D8D8;
+  color: black;
+}
+/* ================================== End Cookie Consent ================================== */
+
