@@ -44,9 +44,7 @@ export default function MenuItem() {
                                         <a href="#" target="_self">ประกาศจัดซื้อจัดจ้าง</a>
                                     </div>
                                     <div className="child">
-                                        <a href="#" target="_self">
-                                            ประกาศผู้ชนะการเสนอราคา
-                                        </a>
+                                        <a href="#" target="_self">ประกาศผู้ชนะการเสนอราคา</a>
                                     </div>
                                     {/* <div className="child">
                                         <a href="#" target="_self">สรุปผลการจัดซื้อจัดจ้าง</a>

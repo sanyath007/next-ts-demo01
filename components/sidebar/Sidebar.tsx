@@ -38,13 +38,29 @@ const Sidebar = ({ isShow }: { isShow: boolean }) => {
                                 <li><Link href="/executives" onClick={() => dispatch(toggleSidebar())}>ผู้บริหารหน่วยงาน</Link></li>
                                 <li><Link href="/structure" onClick={() => dispatch(toggleSidebar())}>โครงสร้างองค์กร</Link></li>
                                 <li><Link href="/mission" onClick={() => dispatch(toggleSidebar())}>ภารกิจและหน้าที่รับผิดชอบ</Link></li>
+                                <li className="has-sub text-sm">
+                                    <a href="">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
+                                    <ul>
+                                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>ปีงบประมาณ พ.ศ. 2566</Link></li>
+                                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>ปีงบประมาณ พ.ศ. 2565</Link></li>
+                                    </ul>
+                                </li>
                             </ul>
                         </li>
                         <li className="has-sub">
                             <a href="">ข่าวประชาสัมพันธ์</a>
                             <ul>
                                 <li><a href="">ข่าวกิจกรรม</a></li>
-                                <li><a href="">ข่าวจัดซื้อจัดจ้าง</a></li>
+                                <li className="has-sub">
+                                    <a href="">ข่าวจัดซื้อจัดจ้าง</a>
+                                    <ul>
+                                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>แผนการจัดซื้อจัดจ้าง</Link></li>
+                                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>ประกาศราคากลาง</Link></li>
+                                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>ประกาศร่าง TOR</Link></li>
+                                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>ประกาศจัดซื้อจัดจ้าง</Link></li>
+                                        <li><Link href="/" onClick={() => dispatch(toggleSidebar())}>ประกาศผู้ชนะการเสนอราคา</Link></li>
+                                    </ul>    
+                                </li>
                                 <li><a href="">ข่าวรับสมัครงาน</a></li>
                                 <li><a href="">ปฏิทินกิจกรรม</a></li>
                             </ul>
