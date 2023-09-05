@@ -43,6 +43,13 @@ body {
   font-family: 'Prompt', sans-serif;
 }
 
+a {
+  color: inherit;
+  text-decoration: none;
+}
+/* ================================== End Global ================================== */
+
+
 /* ================================== Scrollbar ================================== */
 body::-webkit-scrollbar {
   width: 12px;               /* width of the entire scrollbar */
@@ -57,11 +64,8 @@ body::-webkit-scrollbar-thumb {
   border-radius: 20px;       /* roundness of the scroll thumb */
   border: 3px solid #dadada;  /* creates padding around scroll thumb */
 }
+/* ================================== End Scrollbar ================================== */
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
 
 /* ================================== Nav Menu ================================== */
 nav.topnav {
@@ -545,7 +549,124 @@ nav.topnav ~ .topnav-spacer {
 }
 /* ================================== End Nav Menu ================================== */
 
-/* main container */
+
+/* ================================== Sidebar ================================== */
+.sidebar {
+  @apply absolute top-0 left-0 h-full w-[13em] bg-white border z-[1000];
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
+  background: #333333;
+}
+.sidebar .navigation {
+  width: 13em;
+  padding-top: 50px;
+  line-height: 1;
+  zoom: 1;
+}
+
+.sidebar .navigation ul,
+.sidebar .navigation ul li,
+.sidebar .navigation ul ul {
+  list-style: none;
+}
+
+.sidebar .navigation ul {
+  position: relative;
+  z-index: 500;
+  float: left;
+}
+
+.sidebar .navigation ul li {
+  float: left;
+  min-height: 0.05em;
+  line-height: 1em;
+  vertical-align: middle;
+  position: relative;
+}
+
+.sidebar .navigation ul li.hover,
+.sidebar .navigation ul li:hover {
+  position: relative;
+  z-index: 510;
+  cursor: default;
+}
+
+.sidebar .navigation ul ul {
+  visibility: hidden;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 520;
+  width: 100%;
+  float: none;
+  top: 0;
+  left: 99%;
+  border: 1px solid #34A65F;
+}
+
+.sidebar .navigation ul ul ul {
+  top: 0;
+  right: 0;
+}
+
+.sidebar .navigation ul li:hover > ul { visibility: visible; }
+
+.sidebar .navigation ul li { float: none; }
+.sidebar .navigation ul ul { margin-top: 0.05em; }
+.sidebar .navigation > ul > li a:hover,
+.sidebar .navigation > ul > li:hover a { background: #34A65F; }
+.sidebar .navigation ul ul li { border-bottom: 1px solid #0F8A5F; }
+
+.sidebar .navigation::before {
+  content: '';
+  display: block;
+}
+
+.sidebar .navigation::after {
+  content: '';
+  display: table;
+  clear: both;
+}
+
+.sidebar .navigation a {
+  display: block;
+  padding: 1em 1.3em;
+  color: #ffffff;
+}
+
+.sidebar .navigation > ul { width: 13em; }
+.sidebar .navigation ul ul { width: 13em; }
+
+.sidebar .navigation > ul > li > a {
+  border-right: 0.3em solid #34A65F;
+  color: #ffffff;
+}
+
+.sidebar .navigation > ul > li > a:hover { color: #ffffff; }
+.sidebar .navigation > ul > li:hover a { background: #34A65F; }
+.sidebar .navigation li { position: relative; }
+
+.sidebar .navigation ul ul li:hover > a {
+  background: #4eb1ff;
+  color: #ffffff;
+}
+
+.sidebar .navigation ul li.has-sub > a:after {
+  content: "\f105";
+  font-family: "Font Awesome\ 5 Free";
+  font-weight: 700;
+  position: absolute;
+  right: 1em;
+}
+
+.sidebar .navigation ul ul li.first {
+  -webkit-border-radius: 0 3px 0 0;
+  -moz-border-radius: 0 3px 0 0;
+  border-radius: 0 3px 0 0;
+}
+/* ================================== End Sidebar ================================== */
+
+
+/* ================================== Main container ================================== */
 main {
   min-height: 80vh;
   margin-top: 4.5rem;
@@ -555,11 +676,13 @@ main {
     margin-top: 4.8rem;
   }
 }
+/* ================================== End Main container ================================== */
 
-/* Section 1 (Slide heros) */
+/* ================================== Section 1 (Slide heros) ================================== */
+/* ================================== End Section 1 (Slide heros) ================================== */
 
 
-/* Section 2 (Option menu) */
+/* ================================== Section 2 (Option menu) ================================== */
 #section-2 {
   position: relative;
   width: 100%;
@@ -689,8 +812,11 @@ main {
   color: #808080;
   transition: color .3s,top .3s,left .3s,font-size .3s;
 }
+/* ================================== Section 2 (Option menu) ================================== */
 
-/* Section 3 (Content) */
+
+/* ================================== Section 3 (Content) ================================== */
+/* ================================== End Section 3 (Content) ================================== */
 
 
 /* ================================== End Leaflet Map ================================== */
@@ -698,6 +824,7 @@ main {
   z-index: 1 !important;
 }
 /* ================================== End Leaflet Map ================================== */
+
 
 /* ================================== Organization structure ================================== */
 ol {
@@ -709,7 +836,6 @@ ol {
   position: relative;
   padding: 20px;
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.15);
-  
 }
 
 /* LEVEL-1 STYLES
@@ -813,7 +939,6 @@ ol {
   background: var(--black);
 }
 
-
 /* LEVEL-3 STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 .level-3-wrapper {
@@ -852,7 +977,6 @@ ol {
   margin-bottom: 20px;
   background: var(--level-3);
 }
-
 
 /* LEVEL-4 STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -910,7 +1034,6 @@ ol {
   background: var(--black);
 }
 
-
 /* MQ STYLES
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
 @media screen and (max-width: 700px) {
@@ -955,6 +1078,7 @@ ol {
 }
 /* ================================== End organization structure ================================== */
 
+
 /* ================================== News ================================== */
 .news-topic {
   display: flex;
@@ -964,6 +1088,7 @@ ol {
   margin-bottom: 0.5rem;
 }
 /* ================================== End News ================================== */
+
 
 /* ================================== Vision Quote ================================== */
 .vision-quote {
@@ -988,7 +1113,8 @@ ol {
 }
 /* ================================== End Vision Quote ================================== */
 
-/* ================================== End Core Values Quote ================================== */
+
+/* ================================== Core Values Quote ================================== */
 .core__value-quote {
   padding: 60px 80px 40px;
   position: relative;
@@ -1031,6 +1157,7 @@ ol {
   width: 200px;
 }
 /* ================================== End Core Values Quote ================================== */
+
 
 /* ================================== Mission bullet ================================== */
 ol.gradient-list > li::before, ol.gradient-list > li {
@@ -1098,3 +1225,4 @@ ol.gradient-list > li + li {
   margin-top: 2rem;
 }
 /* ================================== End Mission bullet ================================== */
+

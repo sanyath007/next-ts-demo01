@@ -27,6 +27,15 @@ export default function NavMenu() {
                             <div className="submenu ">
                                 <Link href="/executives" target="_self">ผู้บริหารหน่วยงาน</Link>
                             </div>
+                            <div className="submenu ">
+                                <Link href="/structure" target="_self">โครงสร้างองค์กร</Link>
+                            </div>
+                            <div className="submenu ">
+                                <a href="#" target="_self">ภารกิจและหน้าที่รับผิดชอบ</a>
+                            </div>
+                            {/* <div className="submenu ">
+                                <a href="#" target="_self">หน่วยงานในสังกัดกรมอนามัย</a>
+                            </div> */}
                             {/* <div className="submenu has-children">
                                 <a href="#" target="_self">CIO กรมอนามัย</a>
                                 <div className="child-container">
@@ -41,15 +50,6 @@ export default function NavMenu() {
                                         </div>
                                     </div>
                                 </div>
-                            </div> */}
-                            <div className="submenu ">
-                                <Link href="/structure" target="_self">โครงสร้างองค์กร</Link>
-                            </div>
-                            <div className="submenu ">
-                                <a href="#" target="_self">ภารกิจและหน้าที่รับผิดชอบ</a>
-                            </div>
-                            {/* <div className="submenu ">
-                                <a href="#" target="_self">หน่วยงานในสังกัดกรมอนามัย</a>
                             </div> */}
                             <div className="submenu has-children">
                                 <a href="#" target="_self">คำรับรองและรายงานผลการปฏิบัติราชการ</a>
@@ -209,7 +209,7 @@ export default function NavMenu() {
                                 <Link href="/contact" target="_self">ติดต่อเรา</Link>
                             </div>
                             <div className="submenu ">
-                                <Link href="links" target="_self">ลิงค์ที่เกี่ยวข้อง</Link>
+                                <Link href="/links" target="_self">ลิงค์ที่เกี่ยวข้อง</Link>
                             </div>
                         </div>
                     </div>
