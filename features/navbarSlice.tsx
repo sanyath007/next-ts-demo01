@@ -11,6 +11,9 @@ export const navbarSlice = createSlice({
         hideSidebar: (state: any) => {
             state.isShowSidebar = false;
         },
+        showSidebar: (state: any) => {
+            state.isShowSidebar = true;
+        },
         toggleSidebar: (state: any) => {
             state.isShowSidebar = !state.isShowSidebar;
         },
@@ -19,4 +22,4 @@ export const navbarSlice = createSlice({
 
 export default navbarSlice.reducer;
 
-export const { hideSidebar, toggleSidebar } = navbarSlice.actions;
+export const { hideSidebar, showSidebar, toggleSidebar } = navbarSlice.actions;

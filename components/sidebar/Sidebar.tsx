@@ -14,7 +14,10 @@ const Sidebar = ({ isShow }: { isShow: boolean }) => {
     }, []);
 
     const handleClickOutside = (e: MouseEvent) => {
-        if (sidebarRef.current && !sidebarRef.current.contains(e.target)) {
+        /** Get mobile menu element from document */
+        const mobileMenu = window.document.querySelector('.mobile-menu');
+
+        if (sidebarRef.current && !sidebarRef.current.contains(e.target) && !mobileMenu) {
             dispatch(hideSidebar());
         }
     };
