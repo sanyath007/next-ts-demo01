@@ -4,10 +4,9 @@ import SwiperCore, { Autoplay, Navigation, Pagination } from 'swiper'
 import 'swiper/swiper-bundle.css'
 
 const slides = [
-    { id: 1, title: 'Slide 1', imgUrl: 'https://dmh.go.th/images/slides/No%20Gift%20Policy.jpg?1676045301402' },
-    { id: 2, title: 'Slide 2', imgUrl: '/thumbnail_1c30ffd49c597aa9cd42af147a04514b.png' },
-    { id: 3, title: 'Slide 3', imgUrl: '/thumbnail_c550f9c85b119149e89b2ada124649b8.png' },
-    { id: 4, title: 'Slide 4', imgUrl: 'https://anamai.moph.go.th/2000x475//web-upload/1xff0d34e409a13ef56eea54c52a291126/202012/m_banner/102/thumbnail_02d898628c354f66ab187598699daf44.png?q=80&co=9' },
+    { id: 1, title: 'Slide 2', imgUrl: '/thumbnail_1c30ffd49c597aa9cd42af147a04514b.png' },
+    { id: 2, title: 'Slide 3', imgUrl: '/thumbnail_c550f9c85b119149e89b2ada124649b8.png' },
+    { id: 3, title: 'Slide 4', imgUrl: 'https://anamai.moph.go.th/2000x475//web-upload/1xff0d34e409a13ef56eea54c52a291126/202012/m_banner/102/thumbnail_02d898628c354f66ab187598699daf44.png?q=80&co=9' },
 ]
 
 export default function SlideHeros() {

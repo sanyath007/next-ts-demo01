@@ -20,25 +20,16 @@ const Map = dynamic(() => import('../components/maps/map-area'), {
 })
 
 export async function getStaticProps() {
-    const resPosts: AxiosResponse<any, any> = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Relations');
+    const resPosts: AxiosResponse<any, any> = await axios.get('http://localhost:8000/laravel80-mhc9-web/public/api/posts');
     const contents = resPosts.data;
 
-    const resJobNews = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Job');
-    const jobNews = resJobNews.data;
-
-    const resPoNews = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Purchase2');
-    const poNews = resPoNews.data;
-
-    const resOthNews = await axios.get('http://localhost:8088/laravel80-mhc9web/public/api/contents?type=Gallery');
-    const othNews = resOthNews.data;
-
     return {
-        props: { contents, jobNews, poNews, othNews }
+        props: { contents }
     }
 }
 
 export default function Home(
-    { contents, jobNews, poNews, othNews }:{ contents: any[], jobNews: any[], poNews: any[], othNews: any[] }
+    { contents }:{ contents: any[] }
 ) {
     const [posts, setPosts] = useState<ContentItem[]>([]);
     const [headLine, setHeadLine] = useState<ContentItem>();
@@ -52,8 +43,6 @@ export default function Home(
             setPosts(postLists)
         }
     }, [contents]);
-
-    console.log(jobNews)
 
     return (
         <>
