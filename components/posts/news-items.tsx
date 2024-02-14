@@ -1,9 +1,9 @@
 import moment from "moment";
 import { FaClock } from "react-icons/fa"
-import { ContentItem } from "../../models/ContentItem";
+import { Post } from "../../models/Post";
 import { rawMarkup, stripHtml } from "../../utils";
 
-export default function NewsItems({ news }: { news: ContentItem[] }) {
+export default function NewsItems({ news }: { news: Post[] }) {
     return (
         <div className="px-2">
             <ul className="mt-2">
@@ -11,12 +11,12 @@ export default function NewsItems({ news }: { news: ContentItem[] }) {
                     <li key={index}>
                         <div className="news-topic">
                             <FaClock size={"12px"} className="text-gray-600" />
-                            <span className="font-thin text-gray-400 text-xs">{moment(item.wdDate).format('DD-MM-YYYY')}</span>
+                            <span className="font-thin text-gray-400 text-xs">{moment(item.publish_up).format('DD-MM-YYYY')}</span>
                         </div>
                         {/* <p className="text-sm" dangerouslySetInnerHTML={rawMarkup(item?.wdName!)}></p> */}
                         <p className="font-normal text-sm p-0">
-                            <span className="bg-red-500 text-white text-xs px-[5px] pt-[2px] rounded-lg mr-1">{item.wdId}</span>
-                            {stripHtml(item?.wdName!)}
+                            <span className="bg-red-500 text-white text-xs px-[5px] pt-[2px] rounded-lg mr-1">{item.id}</span>
+                            {stripHtml(item?.title!)}
                         </p>
 
                         <hr className="my-2" />

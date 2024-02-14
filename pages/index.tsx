@@ -11,8 +11,8 @@ import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
 import NewsList from '../components/posts/news-list'
 import SlideLogos from '../components/bottom-logos/slide-logos'
-import axios, { AxiosResponse } from 'axios'
-import { ContentItem } from '../models/ContentItem'
+import { Post } from '../models/Post'
+import { getPosts } from '../lib/api'
 
 const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
@@ -20,23 +20,20 @@ const Map = dynamic(() => import('../components/maps/map-area'), {
 })
 
 export async function getStaticProps() {
-    const resPosts: AxiosResponse<any, any> = await axios.get('http://localhost:8000/laravel80-mhc9-web/public/api/posts');
-    const contents = resPosts.data;
+    const { data } = await getPosts();
 
     return {
-        props: { contents }
+        props: { contents: data }
     }
 }
 
-export default function Home(
-    { contents }:{ contents: any[] }
-) {
-    const [posts, setPosts] = useState<ContentItem[]>([]);
-    const [headLine, setHeadLine] = useState<ContentItem>();
+export default function Home({ contents }:{ contents: any[] }) {
+    const [posts, setPosts] = useState<Post[]>([]);
+    const [headLine, setHeadLine] = useState<Post>();
 
     useEffect(() => {
-        if (contents.length > 0) {
-            const postLists = contents.filter((item: ContentItem, index: number) => index > 0);
+        if (contents && contents.length > 0) {
+            const postLists = contents.filter((item: Post, index: number) => index > 0);
             const hl = contents[0];
 
             setHeadLine(hl);

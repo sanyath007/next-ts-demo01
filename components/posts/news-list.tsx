@@ -1,17 +1,17 @@
 import { useEffect, useState } from "react";
-import { ContentItem } from "../../models/ContentItem";
+import { Post } from "../../models/Post";
 import NewsItems from "./news-items";
 
-export default function NewsList ({ news }: { news: ContentItem[] }) {
-    const [jobNews, setJobNews] = useState<ContentItem[]>([]);
-    const [poNews, setPoNews] = useState<ContentItem[]>([]);
-    const [othNews, setOthNews] = useState<ContentItem[]>([]);
+export default function NewsList ({ news }: { news: Post[] }) {
+    const [jobNews, setJobNews] = useState<Post[]>([]);
+    const [poNews, setPoNews] = useState<Post[]>([]);
+    const [othNews, setOthNews] = useState<Post[]>([]);
 
     useEffect(() => {
         if (news) {
-            setJobNews(news.filter((item: ContentItem) => item.wdType === "Job").slice(4));
-            setPoNews(news.filter((item: ContentItem) => item.wdType === "Purchase2"));
-            setOthNews(news.filter((item: ContentItem) => item.wdType === "Gallery").slice(4));
+            setJobNews(news.filter((item: Post) => item.category_id === 3).slice(4));
+            setPoNews(news.filter((item: Post) => item.category_id === 4));
+            setOthNews(news.filter((item: Post) => item.category_id === 5).slice(4));
         }
     }, [news]);
 
