@@ -9,13 +9,17 @@ export default function PostList ({ contents, headline } : { contents: Post[], h
 
             <hr className="my-2" />
 
-            <HeadLine headline={headline} />
-
-            <div className="post-list md:columns-2 lg:columns-3 mt-4 h-full space-y-2">
-                {contents && contents.map((item: Post) => (
-                    <PostItem key={item.id} item={item} />
-                ))}
+            <div className="row">
+                <div className="col-md-8">
+                    <HeadLine headline={headline} />
+                </div>
+                <div className="col-md-4 p-0">
+                    {contents && contents.map((item: Post) => (
+                        <PostItem key={item.id} item={item} />
+                    ))}
+                </div>
             </div>
+
             <div className="text-center mt-4">
                 <a href="#" className="text-xs border hover:border-0 rounded-sm py-1 px-3 hover:bg-blue-400 hover:text-white">
                     ข่าวทั้งหมด

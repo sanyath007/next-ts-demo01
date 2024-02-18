@@ -53,14 +53,13 @@ export default function Index({ posts, headline }: { posts: any[], headline: any
             {/* Contents Section */}
             <section className="pb-5 pt-[1.5rem] xl:px-4">
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
-
                     {/* Posts */}
-                    <div className="flex gap-4">
-                        <div className="w-full lg:w-3/4 xl:4/6">
+                    <div className="row">
+                        <div className="col-md-9">
                             <PostList contents={posts} headline={headline!} />
                         </div>
 
-                        <div className="lg:w-1/4 xl:w-2/6 flex flex-col pl-4 space-y-2 sm:hidden lg:block">
+                        <div className="col-md-3">
                             <Director />
                         </div>
                     </div>

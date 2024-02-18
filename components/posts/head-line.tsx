@@ -4,27 +4,32 @@ import { rawMarkup } from "../../utils";
 
 export default function HeadLine ({ headline }: { headline: Post }) {
     return (
-        <div className="card w-full bg-white border rounded-md overflow-hidden relative">
-            <div className="w-auto h-[400px]">
-                <picture>
-                    {headline && headline.featured ? (
-                        <img
-                            src={`https://mhc9dmh.com/newweb/public/${headline.featured}`}
-                            className="w-full h-[155px]"
-                            alt="image"
-                        />
-                    ) : (
-                        <img
-                            src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg"
-                            className="w-full"
-                            alt="image"
-                        />
-                    )}
-                </picture>
+        <div className="card">
+            <div className="card-img-top overflow-hidden">
+                {headline && headline.featured ? (
+                    <Image
+                        loader={() => `https://mhc9dmh.com/newweb/public/${headline.featured}`}
+                        src={`https://mhc9dmh.com/newweb/public/${headline.featured}`}
+                        alt="image"
+                        width={500}
+                        height={500}
+                        className="w-full h-[300px]"
+                    />
+                ) : (
+                    <Image
+                        src="https://cdn.pixabay.com/photo/2023/01/24/10/02/woman-7740613_960_720.jpg"
+                        alt="image"
+                        width={500}
+                        height={500}
+                        className="w-full"
+                    />
+                )}
             </div>
-            <div className="card-body p-3 mt-4 space-y-1 absolute bg-gray-200 opacity-60 bottom-0 w-full">
-                <h1 className="font-medium text-2xl text-gray-800" dangerouslySetInnerHTML={rawMarkup(headline?.title!)}></h1>
-                <p className="lg:text-lg text-gray-600" dangerouslySetInnerHTML={rawMarkup(headline?.intro_text!)}></p>
+            <div className="card-body bg-gray-200">
+                <div className="opacity-60 w-full">
+                    <h1 className="font-medium text-xl text-gray-800" dangerouslySetInnerHTML={rawMarkup(headline?.title!)}></h1>
+                    <p className="lg:text-sm text-gray-600" dangerouslySetInnerHTML={rawMarkup(headline?.intro_text!)}></p>
+                </div>
             </div>
         </div>
     )
