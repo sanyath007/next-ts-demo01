@@ -23,15 +23,15 @@ const Map = dynamic(() => import('../components/maps/map-area'), {
 export async function getStaticProps() {
     const { data } = await getPosts();
 
-    const posts = data ? data.filter((item: Post, index: number) => index > 0) : [];
-    const headline = data ? data[0] : null;
+    const posts = null; //data ? data.filter((item: Post, index: number) => index > 0) : [];
+    const headline = null //data ? data[0] : null;
 
     return {
         props: { posts, headline }
     }
 }
 
-export default function Index({ posts, headline }: { posts: any[], headline: any }) {
+export default function Home({ posts, headline }: { posts: any[], headline: any }) {
     return (
         <>
             <Head>
@@ -56,7 +56,7 @@ export default function Index({ posts, headline }: { posts: any[], headline: any
                     {/* Posts */}
                     <div className="row">
                         <div className="col-md-9">
-                            <PostList contents={posts} headline={headline!} />
+                            {/* <PostList contents={posts} headline={headline!} /> */}
                         </div>
 
                         <div className="col-md-3">
