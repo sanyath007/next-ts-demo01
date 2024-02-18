@@ -42,13 +42,13 @@ export default function Index({ posts, headline }: { posts: any[], headline: any
             </Head>
 
             {/* Hero Section */}
-            <div>
+            <section className="hero">
                 {/* Slide Heros */}
                 <SlideHeros />
 
                 {/* Option Menus */}
                 <OptionMenu />
-            </div>
+            </section>
 
             {/* Contents Section */}
             <section className="pb-5 pt-[1.5rem] xl:px-4">
