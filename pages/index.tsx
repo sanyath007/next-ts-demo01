@@ -1,7 +1,7 @@
-import { useEffect, useState } from 'react'
+// import { Suspense } from 'react'
 import Head from 'next/head'
 import Image from 'next/image'
-import { Inter } from '@next/font/google'
+// import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import PostList from '../components/posts/post-list'
 import SlideHeros from '../components/heros/slide-heros'
@@ -9,12 +9,13 @@ import VideoList from '../components/videos/video-list'
 import dynamic from "next/dynamic"
 import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
-import NewsList from '../components/posts/news-list'
+// import NewsList from '../components/posts/news-list'
 import SlideLogos from '../components/bottom-logos/slide-logos'
+// import Loading from '../components/Loading'
 import { Post } from '../models/Post'
 import { getPosts } from '../lib/api'
 
-const inter = Inter({ subsets: ['latin'] })
+// const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
     ssr: false
 })
@@ -22,25 +23,15 @@ const Map = dynamic(() => import('../components/maps/map-area'), {
 export async function getStaticProps() {
     const { data } = await getPosts();
 
+    const posts = data ? data.filter((item: Post, index: number) => index > 0) : [];
+    const headline = data ? data[0] : null;
+
     return {
-        props: { contents: data }
+        props: { posts, headline }
     }
 }
 
-export default function Home({ contents }:{ contents: any[] }) {
-    const [posts, setPosts] = useState<Post[]>([]);
-    const [headLine, setHeadLine] = useState<Post>();
-
-    useEffect(() => {
-        if (contents && contents.length > 0) {
-            const postLists = contents.filter((item: Post, index: number) => index > 0);
-            const hl = contents[0];
-
-            setHeadLine(hl);
-            setPosts(postLists)
-        }
-    }, [contents]);
-
+export default function Index({ posts, headline }: { posts: any[], headline: any }) {
     return (
         <>
             <Head>
@@ -50,19 +41,23 @@ export default function Home({ contents }:{ contents: any[] }) {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            {/* Section 1 (Slide heros) */}
-            <SlideHeros />
+            {/* Hero Section */}
+            <div>
+                {/* Slide Heros */}
+                <SlideHeros />
 
-            {/* Section 2 (Option menu) */}
-            <OptionMenu />
+                {/* Option Menus */}
+                <OptionMenu />
+            </div>
 
+            {/* Contents Section */}
             <section className="pb-5 pt-[1.5rem] xl:px-4">
                 <div className="container mx-auto border bg-white p-4 rounded-lg overflow-hidden">
 
-                    {/* Posts Section */}
+                    {/* Posts */}
                     <div className="flex gap-4">
                         <div className="w-full lg:w-3/4 xl:4/6">
-                            <PostList contents={posts} headline={headLine!} />
+                            <PostList contents={posts} headline={headline!} />
                         </div>
 
                         <div className="lg:w-1/4 xl:w-2/6 flex flex-col pl-4 space-y-2 sm:hidden lg:block">
@@ -70,19 +65,18 @@ export default function Home({ contents }:{ contents: any[] }) {
                         </div>
                     </div>
 
-                    {/* Videos Section */}
+                    {/* Videos */}
                     <VideoList />
 
-                    {/* News Section */}
+                    {/* News */}
                     {/* {(jobNews && poNews && othNews) &&<NewsList news={[ ...jobNews, ...poNews, ...othNews ]} />} */}
 
-                    {/* Map Section */}
+                    {/* Map */}
                     {/* <Map /> */}
-
                 </div>
             </section>
 
-            {/* Bottom Section */}
+            {/* Logos Section */}
             <section className="bg-white h-[240px]">
                 <SlideLogos />
             </section>
