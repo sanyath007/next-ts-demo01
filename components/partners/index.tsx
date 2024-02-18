@@ -12,11 +12,11 @@ const slides = [
     { id: 5, imgUrl: 'https://upload.wikimedia.org/wikipedia/th/thumb/c/ca/Opdc.JPG/1200px-Opdc.JPG' },
 ]
 
-export default function SlideLogos() {
+export default function Partners() {
     SwiperCore.use([Autoplay])
 
     return (
-        <div className="h-full py-5">
+        <div className="h-full">
             <Swiper
                 modules={[FreeMode]}
                 slidesPerView={4}
@@ -25,12 +25,16 @@ export default function SlideLogos() {
                 autoplay={{
                     delay: 2000
                 }}
+                style={{ height: '100%' }}
             >
                 {slides.map(slide => (
-                    <SwiperSlide key={slide.id}>
-                        <div className="relative h-[200px] flex flex-row justify-center">
+                    <SwiperSlide
+                        key={slide.id}
+                        style={{ display: 'flex', justifyContent: 'center' }}
+                    >
+                        <div className="w-full flex justify-center items-center">
                             <picture>
-                                <img src={slide.imgUrl} alt="logo" className="h-full w-auto" />
+                                <img src={slide.imgUrl} alt="logo" className="h-[150px] object-contain" />
                             </picture>
                         </div>
                     </SwiperSlide>

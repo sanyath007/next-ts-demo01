@@ -10,7 +10,7 @@ import dynamic from "next/dynamic"
 import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
 // import NewsList from '../components/posts/news-list'
-import SlideLogos from '../components/bottom-logos/slide-logos'
+import Partners from '../components/partners'
 // import Loading from '../components/Loading'
 import { Post } from '../models/Post'
 import { getPosts } from '../lib/api'
@@ -76,8 +76,8 @@ export default function Index({ posts, headline }: { posts: any[], headline: any
             </section>
 
             {/* Logos Section */}
-            <section className="bg-white h-[240px]">
-                <SlideLogos />
+            <section className="bg-white h-[240px] p-4">
+                <Partners />
             </section>
         </>
     )
