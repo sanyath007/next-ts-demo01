@@ -1,7 +1,6 @@
 // import { Suspense } from 'react'
 import Head from 'next/head'
-import Image from 'next/image'
-// import { Inter } from '@next/font/google'
+import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import PostList from '../components/posts/post-list'
 import SlideHeros from '../components/heros/slide-heros'
@@ -12,16 +11,16 @@ import Director from '../components/director/director'
 // import NewsList from '../components/posts/news-list'
 import Partners from '../components/partners'
 // import Loading from '../components/Loading'
-import { Post } from '../models/Post'
-import { getPosts } from '../lib/api'
+// import { Post } from '../models/Post'
+// import { getPosts } from '../lib/api'
 
-// const inter = Inter({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
     ssr: false
 })
 
 export async function getStaticProps() {
-    const { data } = await getPosts();
+    // const { data } = await getPosts();
 
     const posts = null; //data ? data.filter((item: Post, index: number) => index > 0) : [];
     const headline = null //data ? data[0] : null;
