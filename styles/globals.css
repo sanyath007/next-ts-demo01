@@ -1287,3 +1287,21 @@ ol.gradient-list > li + li {
 }
 /* ================================== End Cookie Consent ================================== */
 
+/* ================================== Social Icons ================================== */
+.social-icons {
+  display: flex;
+  gap: 1rem;
+  margin-top: 0.5rem;
+  font-size: 1.5rem;
+  line-height: 2rem;
+}
+
+.social-icons a {
+  color: #fff;
+  transition: transform 200ms;
+}
+
+.social-icons a:hover {
+  color: var(--color0);
+  transform: translateY(-5px);
+}
