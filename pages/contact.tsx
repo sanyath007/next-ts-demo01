@@ -1,6 +1,7 @@
 import Head from "next/head"
 import Link from 'next/link'
 import { FaFacebook, FaInstagram, FaYoutube, FaTwitter, FaLine, FaMapMarkerAlt } from 'react-icons/fa'
+import SocialIcons from "../components/SocialIcons"
 
 export default function Contact() {
     return (
@@ -32,28 +33,13 @@ export default function Contact() {
                                 <div className="flex flex-col w-3/12">
                                     <h2 className="font-bold text-xl my-2">ศูนย์สุขภาพจิตที่ 9</h2>
                                     <ul className="text-sm font-light space-y-2">
-                                        <li>เลขที่ 86 ถ.ช้างเผือก อ.เมือง จ.นครราชสีมา 30000</li>
+                                        <li>เลขที่ 86 ถ.ช้างเผือก ต.ในเมือง อ.เมือง จ.นครราชสีมา 30000</li>
                                         <li>โทรศัพท์ 0-4425-6729</li>
                                         <li>โทรสาร 0-4425-6730</li>
                                         <li>อีเมล mhc9dmh@gmail.com</li>
                                     </ul>
-                                    <div className="social-icons flex gap-4 mt-4 text-2xl">
-                                        <a href="https://www.facebook.com/mhc9dmh" target="_blank" rel="noreferrer" className="hover:text-gray-300">
-                                            <FaFacebook />
-                                        </a>
-                                        <a href="#" target="_blank" rel="noreferrer" className="hover:text-gray-300">
-                                            <FaTwitter />
-                                        </a>
-                                        <a href="#" target="_blank" rel="noreferrer" className="hover:text-gray-300">
-                                            <FaInstagram />
-                                        </a>
-                                        <a href="https://www.youtube.com/@user-vf2ep3tx6h" target="_blank" rel="noreferrer" className="hover:text-gray-300">
-                                            <FaYoutube />
-                                        </a>
-                                        <a href="#" className="hover:text-gray-300">
-                                            <FaLine size={'22px'} />
-                                        </a>
-                                    </div>
+
+                                    <SocialIcons />
                                 </div>
                             </div>
                         </div>
