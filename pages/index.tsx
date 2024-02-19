@@ -1,6 +1,5 @@
 // import { Suspense } from 'react'
 import Head from 'next/head'
-import { Inter } from '@next/font/google'
 import styles from '../styles/Home.module.css'
 import PostList from '../components/posts/post-list'
 import SlideHeros from '../components/heros/slide-heros'
@@ -14,7 +13,6 @@ import Partners from '../components/partners'
 // import { Post } from '../models/Post'
 // import { getPosts } from '../lib/api'
 
-const inter = Inter({ subsets: ['latin'] })
 const Map = dynamic(() => import('../components/maps/map-area'), {
     ssr: false
 })

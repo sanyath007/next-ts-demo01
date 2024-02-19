@@ -1,10 +1,17 @@
 import { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux';
-import Navbar from '../navbar'
-import Footer from '../footer'
+import { Kanit } from '@next/font/google'
 import { getWindowDimensions } from '../../utils'
 import { WindowDimension } from '../../models/WindowDimension'
+import Navbar from '../navbar'
+import Footer from '../footer'
 import Sidebar from '../sidebar/Sidebar'
+
+const kanit = Kanit({
+    weight: ['100', '200', '300', '400', '500', '600', '700', '800', '900'],
+    subsets: ['latin'],
+    display: 'swap',
+});
 
 export default function Layout({ children }: { children: any }) {
     const [screen, setScreen] = useState<WindowDimension>({ width: 0, height: 0 })
@@ -25,7 +32,7 @@ export default function Layout({ children }: { children: any }) {
     }, [])
 
     return (
-        <div className="relative">
+        <div className={kanit.className} style={{ position: 'relative' }}>
             <Sidebar isShow={isShowSidebar} />
 
             <Navbar screenWidth={screen.width} />
