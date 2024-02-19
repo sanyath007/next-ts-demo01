@@ -4,7 +4,7 @@ import styles from '../styles/Home.module.css'
 import PostList from '../components/posts/post-list'
 import SlideHeros from '../components/heros/slide-heros'
 import VideoList from '../components/videos/video-list'
-import dynamic from "next/dynamic"
+// import dynamic from "next/dynamic"
 import OptionMenu from '../components/option-menu/OptionMenu'
 import Director from '../components/director/director'
 // import NewsList from '../components/posts/news-list'
@@ -13,9 +13,9 @@ import Partners from '../components/partners'
 // import { Post } from '../models/Post'
 // import { getPosts } from '../lib/api'
 
-const Map = dynamic(() => import('../components/maps/map-area'), {
-    ssr: false
-})
+// const Map = dynamic(() => import('../components/maps/map-area'), {
+//     ssr: false
+// })
 
 export async function getStaticProps() {
     // const { data } = await getPosts();
