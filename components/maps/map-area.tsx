@@ -1,18 +1,31 @@
-import { useEffect, useState } from "react"
-import { MapContainer, TileLayer, Marker, Polygon, useMap } from "react-leaflet"
+import { ReactNode, useEffect, useState } from "react"
+import { MapContainer, TileLayer, Marker, useMap, useMapEvents } from "react-leaflet"
 import Leaflet from 'leaflet'
 import 'leaflet/dist/leaflet.css'
+import icon from './constants'
 import mapsData from '../../maps/gadm41_THA_1.json'
 import { Coordinate } from "../../models/Coordinate"
 import BorderLine from "./border-line"
 
 export function ChangeView({ coordinates }: { coordinates: Coordinate }) {
     const map = useMap()
-
     map.setView(coordinates, 8)
 
     return null
 }
+
+export function LocationFinderDummy() {
+    const mapEvent = useMapEvents({
+        click: (e: any) => {
+            const { lat, lng } = e.latlng;
+            console.log(lat, lng);
+            // Leaflet.marker([lat, lng], { icon }).addTo(mapEvent);
+        }
+    });
+
+    return null;
+}
+
 export default function MapArea(props: any) {
     const [center, setCenter] = useState<Coordinate>({ lat: 15.345690726270774, lng: 102.44428383273782 })
     const [areas, setAreas] = useState<any[]>([])
@@ -58,7 +71,7 @@ export default function MapArea(props: any) {
                 return ""
                 break;
         }
-    }
+    };
 
     return (
         <div className="p-2">
@@ -76,6 +89,8 @@ export default function MapArea(props: any) {
                 )} */}
 
                 {areas && areas.map((area: any, index: number) => <BorderLine key={index} province={area} />)}
+
+                <LocationFinderDummy />
 
                 <ChangeView coordinates={center} />
             </MapContainer>
